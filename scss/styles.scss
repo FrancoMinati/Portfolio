@@ -1,0 +1,38 @@
+.bg-office{
+    background-color: #003399;
+    &-second{
+        background-color: #0066FF;
+    }
+    &-third{
+        background-color: #3333FF;
+    }
+}
+.bg-color{
+    &-red{
+        background-color: #FF0000;
+    }
+    &-green{
+        background-color: #00CC00;
+    }
+    &-blue{
+        background-color: #003399;
+    }
+    &-yellow{
+        background-color: #FFFF00;
+    }
+    &-black{
+        background-color: #000;
+    }
+    &-white{
+        background-color: #FFF;
+    }
+    &-lightgray{
+        background-color: #FBFCFC;
+    }
+    &-mediumgray{
+        background-color: #F0F3F4;
+    }
+    &-darkgray{
+        background-color: #B3B6B7;
+    }
+}

@@ -1,0 +1,33 @@
+.bg-office {
+  background-color: #003399; }
+  .bg-office-second {
+    background-color: #0066FF; }
+  .bg-office-third {
+    background-color: #3333FF; }
+
+.bg-color-red {
+  background-color: #FF0000; }
+
+.bg-color-green {
+  background-color: #00CC00; }
+
+.bg-color-blue {
+  background-color: #003399; }
+
+.bg-color-yellow {
+  background-color: #FFFF00; }
+
+.bg-color-black {
+  background-color: #000; }
+
+.bg-color-white {
+  background-color: #FFF; }
+
+.bg-color-lightgray {
+  background-color: #FBFCFC; }
+
+.bg-color-mediumgray {
+  background-color: #F0F3F4; }
+
+.bg-color-darkgray {
+  background-color: #B3B6B7; }
