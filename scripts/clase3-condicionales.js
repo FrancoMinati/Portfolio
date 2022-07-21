@@ -26,15 +26,16 @@ for(let i=99;i>=0;i--){
 //WHILE
 //Ejemplo while
 // Es un while true con un break para salir
-/*
+
 while (true) {
     let loQueIngresaElUsuario = prompt("Ingrese algo - Si desea salir ingrese salir")
     console.log(loQueIngresaElUsuario)
     if (loQueIngresaElUsuario == "salir" || loQueIngresaElUsuario == "Salir" || loQueIngresaElUsuario == "SALIR") {
         break
     }
-}*/
+}
 //SWITCH
+/*
 let numeroIngresado = parseInt(prompt("Ingrese un numero"))
 switch (numeroIngresado) {
     case 23:
@@ -52,4 +53,4 @@ switch (numeroIngresado) {
     default:
         alert("Segui participando")
 
-}
+}*/
