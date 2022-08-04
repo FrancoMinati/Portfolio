@@ -19,13 +19,13 @@ img {
   position: relative;
   width: 240px;
   height: 265px;
-  background-color: #000000;
+  background-color:rgba(36,10,108,1);
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
 
 .hex-background {
   position: absolute;
-  background-color: black;
+  background-color: rgba(77,29,164,1);
   /*color of the main-background*/
   top: 2px;
   /* equal to border thickness */

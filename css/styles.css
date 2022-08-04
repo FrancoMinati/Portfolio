@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-body {
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+html {
   min-height: 100%; }
 
+body {
+  background: #020024;
+  background: linear-gradient(0deg, #020024 0%, #6f41d9 0%, #4d1da4 30%, #240a6c 50%, black 100%);
+   }
+   p{
+    text-align: justify;
+   }
 /*
 $color-1: #0960d5;
 $color-2: #fb188d;
@@ -9,10 +17,16 @@ $color-3: #7d29ee;
 $color-4: #0c55b7;
 $color-5: #ff3e14;
 $color-6: #ff1c1c;*/
-.txt {
-  color: #131b23;
+.txt, .txt-nav, .txt-title, .txt-black {
+  color: #e9f1f7;
   font-size: 1.1em;
-  font-family: Karla,sans-serif; }
+  font-family: "Karla",sans-serif; }
+  .txt-nav {
+    font-family: 'Comfortaa', sans-serif; }
+  .txt-title {
+    font-size: 2.2em; }
+  .txt-black {
+    color: #131b23; }
 
 .bg-blue {
   background-color: #2274a5; }
@@ -29,9 +43,16 @@ $color-6: #ff1c1c;*/
 .bg-dust {
   background-color: #816c61; }
 
+.bg-gradient {
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #6f41d9 0%, #4d1da4 30%, #240a6c 65%, #070040 100%); }
+
 .header-list {
   list-style-type: none; }
 
-.header-btn-contrato {
-  background-color: #2274a5;
-  border: none; }
+.rounded-div {
+  border-radius: 20px;
+  border: 5px solid #6f41d9; }
+
+.logo {
+  width: 80px; }
