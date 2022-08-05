@@ -5,11 +5,8 @@ html {
 
 body {
   background: #020024;
-  background: linear-gradient(0deg, #020024 0%, #6f41d9 0%, #4d1da4 30%, #240a6c 50%, black 100%);
-   }
-   p{
-    text-align: justify;
-   }
+  background: linear-gradient(0deg, #020024 0%, #6f41d9 0%, #4d1da4 30%, #240a6c 50%, black 100%); }
+
 /*
 $color-1: #0960d5;
 $color-2: #fb188d;
@@ -53,6 +50,9 @@ $color-6: #ff1c1c;*/
 .rounded-div {
   border-radius: 20px;
   border: 5px solid #6f41d9; }
+
+.section-size {
+  height: 800px; }
 
 .logo {
   width: 80px; }
