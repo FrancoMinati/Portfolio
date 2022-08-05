@@ -31,10 +31,16 @@ class Cliente {
     }
 }
 //salir true para el while, un alert de bienvenida y se crea un objeto cliente seteando el atributo producto como null por ahora
-let salir = true
+
 alert("Bienvenido al carrito de compras")
+const clientes=[]
+//Voy a usar un bucle for para 2 clientes y almacenarlos en un array
+for(let i=0;i<2;i++){
 let nuevoCliente = new Cliente(prompt("Ingrese su nombre"), null)
+let salir = true
+const productos=[]
 while (salir) {
+    
     //entra al while y verifica que el cliente tenga su nombre asignado haciendo uso del metodo verifnombre, si se confirma hace break del otro while
     while (true) {
         if (nuevoCliente.verifNombre()) {
@@ -47,16 +53,29 @@ while (salir) {
     let nuevoProducto = new Producto(prompt("Ingrese el nombre del producto"), parseFloat(prompt("Ingrese la cantidad a llevar")))
     //Se genera el precio del producto
     nuevoProducto.generarPrecioRNG()
-    //Se setea el producto como atributo del cliente
-    nuevoCliente.producto = nuevoProducto
-    alert("Se listara su pedido por consola")
-    //Se lista el pedido por consola
-    console.log("Para el señor: " + nuevoCliente.nombreCliente + "\n" + "------Producto------- \n" +
-        "Nombre: " + nuevoProducto.nombre + "\n" + "Cantidad: " + nuevoProducto.cantidad + "\nPrecio: " + nuevoProducto.precio + "\nPrecioFinal: " + nuevoProducto.generarTotal().toFixed(2))
-//If para salir 
-    if (prompt("Para salir escriba SI").toUpperCase() == "SI") {
+    //agrego cada objeto de producto al array
+    productos.push(nuevoProducto);
+
+    //If para salir 
+    if (prompt("Desea seguir agregando productos").toUpperCase() == "NO") {
         salir = false
+        //agrego el array al cliente como atributo
+        nuevoCliente.producto=productos;
     }
+    
 }
+clientes.push(nuevoCliente)
+}
+console.log("Se listara la compra de cada cliente")
+//Muestra la compra de cada cliente
+for(const cliente of clientes){
+    console.log("Para el señor/a: "+cliente.nombreCliente)
+    console.log("--------PRODUCTOS----------------")
+    for(const producto of cliente.producto){
+        
+        console.log("Nombre: "+producto.nombre+"\nCantidad: "+producto.cantidad+"\nPrecio: "+producto.precio)
+        }
+}
+
 //Por ahora se pide el ingreso de productos sin la verificacion de que estos existan, pero habria que hacer uso de una BD para verificar estas cosas
 //Asi que asumo que este mini ejercicio cumple con lo pedido 
