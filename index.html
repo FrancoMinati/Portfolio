@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="css/hexagon.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>CLASES JS</title>
 </head>
 <!-- CREO QUE LA IDEA GENERAL ES UNA ONEPAGE CON SECCIONES-->
@@ -17,119 +18,73 @@
 <body class=" d-flex flex-column ">
     <header>
         <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid d-flex justify-content-around">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="images/logo-b-2.png" alt="" class="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon bg-snow"></span>
+                    <i class="bi bi-list txt-title"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo-b-2.png" alt="" class="logo"></a>
-
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav d-flex justify-content-around">
-                        <a class="nav-link" aria-current="page" href="">
-                            <p class="txt-nav mt-2">Inicio</p>
-                        </a>
-                        <a class="nav-link" href="#acercaDe">
-                            <p class="txt-nav mt-2">Acerca de</p>
-                        </a>
-                        <a class="nav-link" href="#">
-                            <p class="txt-nav mt-2">Proyectos</p>
-                        </a>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="mx-auto"></div>
+                    <div class="navbar-nav ">
+                        <a class="list-item txt" href="#">Inicio</a>
+                        <a class="list-item txt" href="#">Acerca de</a>
+                        <a class="list-item txt" href="#">Proyectos</a>
+                        <a class="list-item txt ">Contacto</a>
+                        <a class="list-item txt" id="colorChange"><i class="bi bi-lightbulb-fill" id="lamp"></i></a>
                     </div>
+
+
                 </div>
             </div>
         </nav>
     </header>
-    <section id="main " class="section-size container-fluid mt-5">
-        
-            <!--Galeria de hexagonos, estoy dudando si usarla para los proyectos o para toda la web-->
-            <div class="hex-gallery">
-                <div class="hex hex-bg-up"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-up"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-up"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-up"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-middle"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-middle"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-middle"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-middle"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-middle"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-down"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-down"><a href="" class="hex-interior"><img src="images/ff-logo.png" alt=""></a></div>
-                <div class="hex hex-bg-down"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                <div class="hex hex-bg-down"><a href="" class="hex-interior"><img src="images/logo-b.png" alt=""></a></div>
-                
-            </div>
-            
-        
+    <section id="main " class="container ">
+
+        <!--Galeria de hexagonos, estoy dudando si usarla para los proyectos o para toda la web-->
+        <div class="container hex-gallery">
+            <div  class="hex hex-bg-up "><a class="hex-interior" id="hex1"><img src="images/fotos-v (1).jpg" alt=""></a></div>
+            <div  class="hex hex-bg-up" ><a class="hex-interior" id="hex2"><img src="images/fotos-v (2).jpg" alt=""></a></div>
+            <div  class="hex hex-bg-up" ><a class="hex-interior" id="hex3"><img src="images/fotos-v (3).jpg" alt=""></a></div>
+            <div  class="hex hex-bg-up" ><a class="hex-interior" id="hex4"><img src="images/foto-perfil.jpg" alt=""></a></div>
+            <div  class="hex hex-bg-up" ><a class="hex-interior" id="hex5"><img src="images/fotos-v (4).jpg" alt=""></a></div>
+            <div  class="hex hex-bg-up" ><a class="hex-interior" id="hex6"><img src="images/fotos-v (5).jpg" alt=""></a></div>
+            <div  class="hex hex-bg-up" ><a class="hex-interior" id="hex7"><img src="images/fotos-v (6).jpg" alt=""></a></div>
+        </div>
+
     </section>
-    <section id="acercaDe" >
-        <div class="container  mb-5">
-            <div class="container txt-title mb-5 ">
-                <h2 class="txt ">Acerca de mi <i class="bi bi-person-check-fill"></i></h2>
+    <section id="acercaDe">
+        <div class="container bkg-snow pb-2 shadow-lg rounded-div">
+            <div class="container  mb-5 ">
+                <h2 class="txt-title-b mt-2">Acerca de mi <i class="bi bi-person-check-fill"></i></h2>
+                <div class="row d-flex ">
+                    <div class="col p-2 me-3 bkg-blue">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam animi laborum
+                            suscipit debitis, deleniti repellendus obcaecati porro facilis. Quis facere voluptatum aut
+                            nesciunt exercitationem dicta temporibus ut nostrum et!</p>
+                    </div>
+                    <div class="col p-2 me-3 bkg-blue">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam animi laborum
+                            suscipit debitis, deleniti repellendus obcaecati porro facilis. Quis facere voluptatum aut
+                            nesciunt exercitationem dicta temporibus ut nostrum et!</p>
+                    </div>
+                    <div class="col p-2 bkg-gradient">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam animi laborum
+                            suscipit debitis, deleniti repellendus obcaecati porro facilis. Quis facere voluptatum aut
+                            nesciunt exercitationem dicta temporibus ut nostrum et!</p>
+                    </div>
+                </div>
             </div>
             <!--Pretendo hacer una pantalla dividida, de un lado con una imagen mia o representativa y del otro informacion acerca de mi-->
-            <div class="row ">
-                <!--IMAGEN-->
-                <div class="col-5 bg-gradient shadow-lg me-5 rounded-div">
-                    <p class="txt mt-3" id="primerP">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit eligendi
-                        modi, voluptates commodi repudiandae tempora expedita ad voluptatum explicabo repellendus
-                        voluptas ex quos, illum sit maxime, ipsa minima beatae molestias!
-                        Illo maxime dolorem minus eos quibusdam earum obcaecati beatae enim voluptatem aut. Alias,
-                        deserunt error, ea aspernatur commodi quam libero odio modi blanditiis quas nulla assumenda.
-                        Aliquam quas ea quisquam.
-                        Cum, adipisci? In ea ducimus perspiciatis dolores quibusdam neque, explicabo culpa adipisci
-                        suscipit sed est expedita quisquam placeat exercitationem odit rem nesciunt ipsum. Incidunt
-                        libero eos aperiam ad. Facilis, fuga!
-                        Earum provident vero laboriosam iste error consectetur magnam? Cum omnis incidunt praesentium,
-                        sint similique error impedit itaque? Enim sint hic, consectetur voluptates illo eius nobis,
-                        dolorum dolore, expedita veritatis praesentium.
-                        Tempora nihil, sapiente doloribus hic suscipit eius sit tempore deleniti necessitatibus unde
-                        totam quisquam? Soluta magni maiores quas, molestias, officiis.
-                      </p>
-                </div>
-                <!--INFORMACION-->
-                <div class="col ">
-                    <div class="row">
-                        <div class="col bg-gradient shadow-lg me-5 rounded-div me-5">
-                            <p class="txt mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                                labore et tenetur at ullam, vitae recusandae veritatis inventore aspernatur? Tenetur
-                                porro quam eos similique nihil assumenda accusamus vitae facere laborum.
-                                </p>
-                        </div>
-                        
-                        <div class="col bg-gradient shadow-lg me-5 rounded-div">
-                            <p class="txt mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                                labore et tenetur at ullam, vitae recusandae veritatis inventore aspernatur? Tenetur
-                                porro quam eos similique nihil assumenda accusamus vitae facere laborum.
-                                </p>
-                        </div>
-                    </div>
-                    <div class="row mt-5">
-                        <div class="col bg-gradient shadow-lg me-5 rounded-div ">
-                            <p class="txt mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                                labore et tenetur at ullam, vitae recusandae veritatis inventore aspernatur? Tenetur
-                                porro quam eos similique nihil assumenda accusamus vitae facere laborum.
-                                </p>
-                        </div>
-                        <div class="col bg-gradient shadow-lg me-5 rounded-div">
-                            <p class="txt mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                                labore et tenetur at ullam, vitae recusandae veritatis inventore aspernatur? Tenetur
-                                porro quam eos similique nihil assumenda accusamus vitae facere laborum.
-                                </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <section id="proyectos" class="section-size">
         <div class="container">
-           
-          
-              
-              
+
+
+
+
         </div>
     </section>
     <section id="contratos"></section>
@@ -142,8 +97,13 @@
 <!--DESAFIO 1 <script src="scripts/miarchivo.js"></script> -->
 <!--CLASE 4 <script src="scripts/clase4.js"></script> -->
 <!--CLASE 5 <script src="scripts/clase5.js"></script> -->
-<!--DESAFIO 2 <script src="scripts/simuladorInteractivo.js"></script> --> 
+<!--DESAFIO 2 <script src="scripts/simuladorInteractivo.js"></script> -->
 <!--CLASE 6 <script src="scripts/clase6.js"></script> -->
 <!--CLASE 7 <script src="scripts/clase7.js"></script> -->
-<script src="scripts/preEntrega1.js"></script>
+<!--PRE ENTREGA 1 <script src="scripts/preEntrega1.js"></script> -->
+<script src="scripts/desafioDOM.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+
 </html>
