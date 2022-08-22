@@ -1,22 +1,18 @@
 let boton = document.querySelector("#colorChange")
-let counter = 0
-
+let lampara=document.querySelector("#lamp");
+let counter = 1
 boton.addEventListener("click", cambiarColor, counter)
 
 function cambiarColor() {
-    if (counter % 2 == 0) {
-        document.documentElement.style.filter = "grayscale(1)"
-
-        document.querySelector("#lamp").classList.remove("bi-lightbulb-fill")
-        document.querySelector("#lamp").classList.add("bi-lightbulb")
-    } else {
-        document.documentElement.style.filter = "grayscale(0)"
-
-        document.querySelector("#lamp").classList.remove("bi-lightbulb")
-        document.querySelector("#lamp").classList.add("bi-lightbulb-fill")
-    }
     counter++
-
+    (counter % 2 == 0) ?
+    (document.documentElement.style.filter = "grayscale(1)",
+    lampara.classList.remove("bi-lightbulb-fill"),
+    lampara.classList.add("bi-lightbulb"))
+    :
+    (document.documentElement.style.filter = "grayscale(0)",
+    lampara.classList.remove("bi-lightbulb"),
+    lampara.classList.add("bi-lightbulb-fill"))
 }
 
 //Selecciono los divs de los hexagonos mediante la busqueda de todos los que contengan la clase hex
