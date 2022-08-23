@@ -1,0 +1,64 @@
+//For Page Logo
+.img-logo {
+  width: 80px;
+}
+//For Divs i may use to show an image with description bellow
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 2em;
+
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: gainsboro;
+}
+// A class for the img
+.img-show {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid gainsboro;
+  position: relative;
+  margin: 2em auto;
+}
+// after and before for hover use
+.img-container::before,
+.img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: transform ease-out 250ms;
+}
+.img-container:hover {
+  opacity: 0.75;
+}
+// Text inside imgs
+.img-txt {
+  
+  position: absolute;
+  width: 80%;
+  transition: opacity ease-out 250ms;
+  opacity: 0;
+  top:35%;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+}
+.img-text,
+.img-title {
+  color: rgb(255, 255, 255);
+}
+.img-text{
+    padding-top: 2em;
+}
+.img-title {
+  font-family: "Bebas Neue", sans-serif;
+}
+.img-container:hover .img-txt {
+  opacity: 1;
+}

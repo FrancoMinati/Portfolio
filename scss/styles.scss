@@ -1,17 +1,26 @@
+@import "scss/partials/colors";
+@import "scss/partials/imgs";
+@import "scss/partials/hex";
+@import "scss/partials/txt";
+
 html {
   min-height: 100%;
   margin: 0;
   padding: 0;
 }
+// Paleta de colores
+
+
 body {
-  background: linear-gradient(
+ /*  background: linear-gradient(
     0deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(111, 65, 217, 1) 0%,
     rgba(77, 29, 164, 1) 30%,
     rgba(36, 10, 108, 1) 50%,
     rgba(0, 0, 0, 1) 100%
-  );
+  ); */
+  background-color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -22,55 +31,7 @@ nav {
   display: block;
 }
 //Posibles 6
-/*
-$color-1: #0960d5;
-$color-2: #fb188d;
-$color-3: #7d29ee;
-$color-4: #0c55b7;
-$color-5: #ff3e14;
-$color-6: #ff1c1c;*/
 
-// Paleta de colores
-
-$color-blue: #2274a5;
-$color-sand: #e7dfc6;
-$color-snow: #e9f1f7;
-$color-black: #131b23;
-$color-dust: #816c61;
-
-//font
-@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
-$font-size: 1.1em;
-$font-size-t: 2.2em;
-$font-bold: 600;
-
-//mixins
-@mixin text {
-  color: $color-snow;
-  font-size: $font-size;
-}
-//text
-.txt {
-  @include text();
-  font-family: "Karla", sans-serif;
-  &-nav {
-    @extend .txt;
-    font-family: "Comfortaa", sans-serif;
-  }
-  &-title {
-    @extend .txt;
-    font-size: $font-size-t;
-    &-b {
-      @extend .txt-title;
-      color: $color-black;
-    }
-  }
-  &-black {
-    @extend .txt;
-    color: $color-black;
-  }
-}
 //Backgrounds
 .bkg {
   &-blue {
@@ -102,7 +63,7 @@ $font-bold: 600;
   text-decoration: none;
   margin: 0px 10px;
   &:hover{
-    color: $color-sand;
+    color: $color-3;
    
   }
 }
@@ -113,8 +74,3 @@ $font-bold: 600;
 }
 
 //IMAGES
-.logo {
-  width: 80px;
-}
-
-
