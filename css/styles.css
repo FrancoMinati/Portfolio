@@ -4,6 +4,13 @@
 .img-logo {
   width: 80px; }
 
+.img-logo:hover {
+  box-shadow: 5px 8px 20px gainsboro; }
+
+.img-stack-logo {
+  width: 200px;
+  height: 200px; }
+
 .img-container {
   display: flex;
   justify-content: center;
@@ -204,10 +211,37 @@ body {
   a .txt:hover, a .txt-nav:hover, a .txt-title:hover, a .txt-title-b:hover, a .txt-black:hover {
     color: #7d29ee; }
 
+blockquote::before {
+  content: open-quote; }
+
+blockquote::after {
+  content: close-quote; }
+
+.form-div {
+  margin-top: 1.3em;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 2em; }
+
+.form-col {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center; }
+
+.form-lb {
+  margin-right: .3em; }
+
 html {
   min-height: 100%;
   margin: 0;
   padding: 0; }
+
+section {
+  margin-bottom: 150px; }
 
 body {
   /*  background: linear-gradient(

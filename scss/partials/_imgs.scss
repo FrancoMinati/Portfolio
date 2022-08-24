@@ -2,6 +2,14 @@
 .img-logo {
   width: 80px;
 }
+.img-logo:hover{
+box-shadow: 5px 8px 20px gainsboro;
+}
+//For Tecnology stack logos
+.img-stack-logo{
+  width: 200px;
+  height: 200px;
+}
 //For Divs i may use to show an image with description bellow
 .img-container {
   display: flex;

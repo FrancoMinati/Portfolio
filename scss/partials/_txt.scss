@@ -39,3 +39,28 @@ body{
     color: $color-3;
   }
 }
+blockquote::before{
+  content: open-quote;
+}
+blockquote::after{
+  content: close-quote;
+}
+
+.form-div{
+margin-top: 1.3em;
+display: grid;
+width: 100%;
+grid-template-columns: repeat(2,auto);
+grid-template-rows: repeat(2,auto);
+gap: 2em;
+}
+.form-col{
+width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+}
+.form-lb{
+  margin-right: .3em;
+}
