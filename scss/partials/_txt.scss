@@ -5,10 +5,10 @@ $font-size: 1.1em;
 $font-size-t: 2.2em;
 $font-bold: 600;
 
-body{
-    font-family: "Karla", sans-serif;
-    text-align: justify;
-    font-size: 1.2em;
+body {
+  font-family: "Karla", sans-serif;
+  text-align: justify;
+  font-size: 1.2em;
 }
 //mixins
 @mixin text {
@@ -35,32 +35,20 @@ body{
     @extend .txt;
     color: black;
   }
-  a &:hover{
+  a &:hover {
     color: $color-3;
   }
 }
-blockquote::before{
+blockquote::before {
   content: open-quote;
 }
-blockquote::after{
+blockquote::after {
   content: close-quote;
 }
 
-.form-div{
-margin-top: 1.3em;
-display: grid;
-width: 100%;
-grid-template-columns: repeat(2,auto);
-grid-template-rows: repeat(2,auto);
-gap: 2em;
+
+@media screen and (max-width:768px){
+body{
+  font-size: 1em;
 }
-.form-col{
-width: 100%;
-display: flex;
-flex-direction: row;
-flex-wrap: nowrap;
-justify-content: center;
-}
-.form-lb{
-  margin-right: .3em;
 }

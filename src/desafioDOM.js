@@ -1,25 +1,25 @@
 let boton = document.querySelector("#colorChange")
-let lampara=document.querySelector("#lamp");
+let lampara = document.querySelector("#lamp");
 let counter = 1
 boton.addEventListener("click", cambiarColor, counter)
 
 function cambiarColor() {
     counter++
     (counter % 2 == 0) ?
-    (document.documentElement.style.filter = "grayscale(1)",
-    lampara.classList.remove("bi-lightbulb-fill"),
-    lampara.classList.add("bi-lightbulb"))
-    :
-    (document.documentElement.style.filter = "grayscale(0)",
-    lampara.classList.remove("bi-lightbulb"),
-    lampara.classList.add("bi-lightbulb-fill"))
+        (document.documentElement.style.filter = "grayscale(1)",
+            lampara.classList.remove("bi-lightbulb-fill"),
+            lampara.classList.add("bi-lightbulb"))
+        :
+        (document.documentElement.style.filter = "grayscale(0)",
+            lampara.classList.remove("bi-lightbulb"),
+            lampara.classList.add("bi-lightbulb-fill"))
 }
 
 //Selecciono los divs de los hexagonos mediante la busqueda de todos los que contengan la clase hex
 let hex = document.querySelectorAll(".hex")
 /*Los almaceno en un array con push y obteniendo su id para posteriormente trabajar con ellos
  y obtener ademas la cantidad de hexagonos*/
- 
+
 let hexArray = []
 for (let i = 0; i < hex.length; i++) {
     /*Para obtener su id concateno la palabra hex junto con i+1 pq sus ids parten desde 1*/
@@ -34,7 +34,7 @@ sentido.
 
 Te comento todo esto juan, para que veas el proceso nomas.*/
 /*Almaceno las funciones en arrays*/
-let mostrarA=[]
+/* let mostrarA=[]
 let ocultarA=[]
 for(let j=0;j<hexArray.length;j++){
     mostrarA.push(function mostrar(){
@@ -46,11 +46,11 @@ for(let j=0;j<hexArray.length;j++){
     
 }
 /* Hago uso de los eventos mouseover y mouseout para mostrar el texto en los hexagonos*/
-for(let k=0;k<hexArray.length;k++){
+/* for(let k=0;k<hexArray.length;k++){
     hexArray[k].addEventListener("mouseover",mostrarA[k])
     hexArray[k].addEventListener("mouseout",ocultarA[k],true)
 }
-
+ */
 
 // Esto lo dejo comentado pq fue como me di cuenta de como hacer lo de los hexagonos
 /*
@@ -64,3 +64,15 @@ function ocultar(){
     hexArray[0].querySelector(".hex-txt").style.visibility="hidden"
 }
 */
+let stackT = document.querySelector("#t-stack")
+let logoHtml = document.querySelector("#logo-1")
+console.log(stackT)
+window.addEventListener('resize', function ponerColumna() {
+    window.innerWidth < 500 ? (
+        stackT.classList.add("flex-column"),
+        logoHtml.classList.remove("me-auto"),
+        logoHtml.classList.add("pb-2"))
+        : (stackT.classList.remove("flex-column"),
+            logoHtml.classList.add("me-auto"),
+            logoHtml.classList.remove("pb-2"))
+});
