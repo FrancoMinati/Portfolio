@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla&display=swap");
 @import "scss/partials/colors";
 @import "scss/partials/txt";
 @import "scss/partials/imgs";
 @import "scss/partials/hex";
 @import "scss/partials/tags/form";
+@import "scss/partials/tags/btns";
+@import "scss/partials/tags/tables";
+
 section {
   margin-bottom: 150px;
 }
@@ -69,17 +71,6 @@ nav {
   border-radius: 20px;
   border: 5px solid rgba(111, 65, 217, 1);
 }
-table,
-th,
-tr,
-td {
-  border: 1px solid black;
-  text-align: center;
-}
-button{
-  border: 2px solid $color-7;
-  background-color: $color-3;
-  color: white;
-  padding: .2em 1em;
-}
+
+
 //IMAGES

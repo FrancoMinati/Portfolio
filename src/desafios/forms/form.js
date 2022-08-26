@@ -76,7 +76,13 @@ enviar.addEventListener("click", function crear_Solicitud() {
 //Recuperacion de solicitudes
 
 btnSolicitud.addEventListener("click", function mostrar_Solicitudes(e) {
-   
+    //Con esto de aca verifico que si presionan el boton de nuevo
+    //El contenido se cargue sin repetirse.
+    var child = tbody.lastElementChild; 
+    while (child) {
+        tbody.removeChild(child);
+        child = tbody.lastElementChild;
+    }
     for (let i = 1; i <= id; i++) {
         let solicitudLs=JSON.parse(localStorage.getItem(i));
         const tr = document.createElement('tr')
@@ -88,6 +94,7 @@ btnSolicitud.addEventListener("click", function mostrar_Solicitudes(e) {
                       <td>${solicitudLs.motivo}</td>`
     
         tbody.appendChild(tr);
+        
     }
     
 })

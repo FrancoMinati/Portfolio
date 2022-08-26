@@ -76,3 +76,9 @@ window.addEventListener('resize', function ponerColumna() {
             logoHtml.classList.add("me-auto"),
             logoHtml.classList.remove("pb-2"))
 });
+let perfil=document.querySelector("#acercaDe")
+window.addEventListener('scroll',function aparecerSection(){
+    window.outerHeight<600?(
+        perfil.style.visibility="hidden"
+    ):(perfil.style.visibility="visible")
+});
