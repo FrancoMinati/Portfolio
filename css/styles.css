@@ -64,11 +64,12 @@ blockquote::after {
 .img-container::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   transition: transform ease-out 250ms; }
+
+.img-container::before {
+  z-index: -1;
+  background: linear-gradient(0deg, black 0.7, #949494 0.2); }
 
 .img-container:hover {
   opacity: 0.75; }
@@ -78,7 +79,7 @@ blockquote::after {
   width: 80%;
   transition: opacity ease-out 250ms;
   opacity: 0;
-  top: 35%;
+  top: 25%;
   text-align: center;
   font-family: "Karla", sans-serif; }
 
@@ -90,7 +91,8 @@ blockquote::after {
   padding-top: 2em; }
 
 .img-title {
-  font-family: "Bebas Neue", sans-serif; }
+  font-family: "Bebas Neue", sans-serif;
+  padding-bottom: .5em; }
 
 .img-container:hover .img-txt {
   opacity: 1; }

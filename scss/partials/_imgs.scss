@@ -37,11 +37,13 @@ box-shadow: 5px 8px 20px gainsboro;
 .img-container::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   transition: transform ease-out 250ms;
+}
+.img-container::before{
+  
+  z-index: -1;
+  background: linear-gradient(0deg, rgb(0, 0 ,0 )0.7, rgb(148, 148, 148)0.2);
 }
 .img-container:hover {
   opacity: 0.75;
@@ -53,7 +55,7 @@ box-shadow: 5px 8px 20px gainsboro;
   width: 80%;
   transition: opacity ease-out 250ms;
   opacity: 0;
-  top:35%;
+  top:25%;
   text-align: center;
   font-family: "Karla", sans-serif;
 }
@@ -66,6 +68,7 @@ box-shadow: 5px 8px 20px gainsboro;
 }
 .img-title {
   font-family: "Bebas Neue", sans-serif;
+  padding-bottom: .5em;
 }
 .img-container:hover .img-txt {
   opacity: 1;

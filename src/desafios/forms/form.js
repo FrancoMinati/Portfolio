@@ -27,8 +27,10 @@ class Formulario {
         }
     }
     setNumero(numeroAtribute) {
-/*         console.log(numeroAtribute.toString().length);
- */        if (numeroAtribute.length == 12) {
+        /*         console.log(numeroAtribute.toString().length);
+         */
+        let numRegex= /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+        if (numRegex.test(numeroAtribute)) {
             this.numero = numeroAtribute;
             return true;
         } else {
@@ -76,19 +78,19 @@ enviar.addEventListener("click", function crear_Solicitud() {
 //Recuperacion de solicitudes
 
 btnSolicitud.addEventListener("click", function mostrar_Solicitudes(e) {
-   
+
     for (let i = 1; i <= id; i++) {
-        let solicitudLs=JSON.parse(localStorage.getItem(i));
+        let solicitudLs = JSON.parse(localStorage.getItem(i));
         const tr = document.createElement('tr')
-    
+
         tr.innerHTML = `<td> ${solicitudLs.nombre}</td> 
                       <td>${solicitudLs.apellido}</td>
                       <td>${solicitudLs.email}</td> 
                       <td>${solicitudLs.numero}</td>
                       <td>${solicitudLs.motivo}</td>`
-    
+
         tbody.appendChild(tr);
     }
-    
+
 })
 
