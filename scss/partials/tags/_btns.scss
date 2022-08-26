@@ -1,0 +1,12 @@
+button{
+    padding: .2em 3em;
+    margin-bottom: 1.5em;
+    background-color: $color-3;
+    color: #fff;
+    border: 1px $color-7 solid;
+}
+button:hover{
+    background-color: $color-1;
+    border: 1px $color-4 solid;
+    transition: 500ms ease-in;
+}
