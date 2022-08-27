@@ -4,11 +4,15 @@
 }
 .img-logo:hover{
 box-shadow: 5px 8px 20px gainsboro;
+transition: 250ms ease-in;
 }
 //For Tecnology stack logos
 .img-stack-logo{
-  width: 200px;
-  height: 200px;
+  min-width: 150px;
+  max-width: 250px;
+  min-height: 150px;
+  max-height: 250px;
+  margin: 1em 1em;
 }
 //For Divs i may use to show an image with description bellow
 .img-container {
@@ -17,36 +21,35 @@ box-shadow: 5px 8px 20px gainsboro;
   align-items: center;
   position: relative;
   margin-top: 2em;
-
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  border: none;
+  
   background-color: gainsboro;
-}
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(119,116,128,1) 32%, rgb(82, 81, 81) 100%);}
 // A class for the img
 .img-show {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  border: 5px solid gainsboro;
   position: relative;
-  margin: 2em auto;
+  border: 9px solid gainsboro;
+  border-radius: 50%;
 }
 // after and before for hover use
 .img-container::before,
 .img-container::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
+  opacity: 1;
   transition: transform ease-out 250ms;
-}
-.img-container::before{
   
-  z-index: -1;
-  background: linear-gradient(0deg, rgb(0, 0 ,0 )0.7, rgb(148, 148, 148)0.2);
 }
-.img-container:hover {
-  opacity: 0.75;
+
+.img-container:hover .img-show{
+  opacity: 0.7;
+
 }
 // Text inside imgs
 .img-txt {
@@ -58,6 +61,7 @@ box-shadow: 5px 8px 20px gainsboro;
   top:25%;
   text-align: center;
   font-family: "Karla", sans-serif;
+ 
 }
 .img-text,
 .img-title {
@@ -69,6 +73,7 @@ box-shadow: 5px 8px 20px gainsboro;
 .img-title {
   font-family: "Bebas Neue", sans-serif;
   padding-bottom: .5em;
+
 }
 .img-container:hover .img-txt {
   opacity: 1;

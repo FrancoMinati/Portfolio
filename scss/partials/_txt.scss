@@ -50,7 +50,13 @@ blockquote::after {
   content: close-quote;
 }
 
-
+a{
+  text-decoration: none;
+  color: $color-black;
+}
+a:hover{
+  color: $color-3;
+}
 @media screen and (max-width:768px){
 body{
   font-size: 1em;

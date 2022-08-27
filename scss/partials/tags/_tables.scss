@@ -6,12 +6,12 @@ tbody,
 thead {
     border: 1px solid gainsboro;
     text-align: center;
-    
+   
 }
 
 table{
     background-color: $color-snow;
-    
+    width: 50%;
 }
 
 th::after,th::before{

@@ -68,13 +68,9 @@ let stackT = document.querySelector("#t-stack")
 let logoHtml = document.querySelector("#logo-1")
 console.log(stackT)
 window.addEventListener('resize', function ponerColumna() {
-    window.innerWidth < 500 ? (
-        stackT.classList.add("flex-column"),
-        logoHtml.classList.remove("me-auto"),
-        logoHtml.classList.add("pb-2"))
-        : (stackT.classList.remove("flex-column"),
-            logoHtml.classList.add("me-auto"),
-            logoHtml.classList.remove("pb-2"))
+    window.innerWidth < 1000 ? (
+        stackT.classList.add("flex-column","align-items-center"))
+        : (stackT.classList.remove("flex-column","align-items-center"))
 });
 let perfil=document.querySelector("#acercaDe")
 window.addEventListener('scroll',function aparecerSection(){

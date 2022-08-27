@@ -33,7 +33,7 @@
     0% 25%
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-   
+  
 }
 
 .hex::before,.hex::after{
@@ -45,7 +45,7 @@
   right: 1.25em;
   opacity: 1;
   transition: transform ease-out 250ms;
-
+  
 }
 .hex::after{
   
@@ -66,8 +66,13 @@
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
+.hex .hex-img{
+  opacity: 1;
+  transition: 2s ease;
+}
 .hex:hover .hex-img{
   opacity: 0.4;
+  transition: 600ms ease;
 }
 .hex-txt {
   position: absolute;
