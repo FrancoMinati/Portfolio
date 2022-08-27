@@ -47,10 +47,10 @@ a:hover {
   transition: 250ms ease-in; }
 
 .img-stack-logo {
-  min-width: 150px;
-  max-width: 250px;
-  min-height: 150px;
-  max-height: 250px;
+  min-width: 80px;
+  max-width: 160px;
+  min-height: 80px;
+  max-height: 160px;
   margin: 1em 1em; }
 
 .img-container {
