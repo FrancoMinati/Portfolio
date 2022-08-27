@@ -72,9 +72,3 @@ window.addEventListener('resize', function ponerColumna() {
         stackT.classList.add("flex-column","align-items-center"))
         : (stackT.classList.remove("flex-column","align-items-center"))
 });
-let perfil=document.querySelector("#acercaDe")
-window.addEventListener('scroll',function aparecerSection(){
-    window.outerHeight<600?(
-        perfil.style.visibility="hidden"
-    ):(perfil.style.visibility="visible")
-});

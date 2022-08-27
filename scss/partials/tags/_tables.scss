@@ -11,11 +11,23 @@ thead {
 
 table{
     background-color: $color-snow;
-    width: 50%;
+    width: 100%;
 }
-
-th::after,th::before{
-    content: '-';
-    white-space: nowrap;
-    
+@media screen and (max-width:650px) {
+    table th{
+        display: none;
+    }
+    table tr td{
+        display: block;
+        text-align: right;
+        position: relative;
+    }
+    table tr td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        padding-left: 1em;
+        transition: 500ms ease;
+    }
 }

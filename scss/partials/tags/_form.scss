@@ -5,7 +5,8 @@
 
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(200px, auto);
-  gap: 2em;
+  row-gap: 0em;
+  column-gap: 2em;
 }
 //col extends for column
 .form-col {
@@ -14,6 +15,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
+  
 }
 //lb extends for label
 .form-lb {
@@ -98,4 +100,39 @@ select {
 }
 input[select] {
   height: 2em;
+}
+
+@media screen and (max-width:650px) {
+  
+  .form-div {
+    padding: 2em 2em;
+    width: 100%;
+    display: grid;
+  
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(200px, auto);
+    gap: 2em;
+  }
+  fieldset {
+    &::before,
+    &::after {
+      content: "";
+      height: 20%;
+      display: block;
+      width: 20%;
+      position: absolute;
+      margin-top: 0.5em;
+    }
+    &::before {
+      background-color: $color-3;
+      left: 5%;
+      top: 0;
+    }
+    &::after {
+      background-color: $color-3;
+      right: 5%;
+      top: 0;
+    }
+  }
+  
 }

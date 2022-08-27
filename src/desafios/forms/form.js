@@ -29,7 +29,7 @@ class Formulario {
     setNumero(numeroAtribute) {
         /*         console.log(numeroAtribute.toString().length);
          */
-        let numRegex= /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+        let numRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
         if (numRegex.test(numeroAtribute)) {
             this.numero = numeroAtribute;
             return true;
@@ -80,7 +80,7 @@ enviar.addEventListener("click", function crear_Solicitud() {
 btnSolicitud.addEventListener("click", function mostrar_Solicitudes(e) {
     //Con esto de aca verifico que si presionan el boton de nuevo
     //El contenido se cargue sin repetirse.
-    var child = tbody.lastElementChild; 
+    var child = tbody.lastElementChild;
     while (child) {
         tbody.removeChild(child);
         child = tbody.lastElementChild;
@@ -89,15 +89,14 @@ btnSolicitud.addEventListener("click", function mostrar_Solicitudes(e) {
     for (let i = 1; i <= id; i++) {
         let solicitudLs = JSON.parse(localStorage.getItem(i));
         const tr = document.createElement('tr')
-        tr.innerHTML = `<td> ${solicitudLs.nombre}</td> 
-                      <td>${solicitudLs.apellido}</td>
-                      <td>${solicitudLs.email}</td> 
-                      <td>${solicitudLs.numero}</td>
-                      <td>${solicitudLs.motivo}</td>`
+        tr.innerHTML = `<td data-label="Nombre"> ${solicitudLs.nombre}</td> 
+                      <td data-label="Apellido">${solicitudLs.apellido}</td>
+                      <td data-label="Email">${solicitudLs.email}</td> 
+                      <td data-label="Numero">${solicitudLs.numero}</td>
+                      <td data-label="Motivo">${solicitudLs.motivo}</td>`
 
         tbody.appendChild(tr);
-        
+
     }
 
 })
-

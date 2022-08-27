@@ -244,7 +244,8 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(200px, auto);
-  gap: 2em; }
+  row-gap: 0em;
+  column-gap: 2em; }
 
 .form-col {
   width: 100%;
@@ -327,6 +328,30 @@ select {
 input[select] {
   height: 2em; }
 
+@media screen and (max-width: 650px) {
+  .form-div {
+    padding: 2em 2em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(200px, auto);
+    gap: 2em; }
+  fieldset::before, fieldset::after {
+    content: "";
+    height: 20%;
+    display: block;
+    width: 20%;
+    position: absolute;
+    margin-top: 0.5em; }
+  fieldset::before {
+    background-color: #7d29ee;
+    left: 5%;
+    top: 0; }
+  fieldset::after {
+    background-color: #7d29ee;
+    right: 5%;
+    top: 0; } }
+
 button {
   padding: .2em 3em;
   margin-bottom: 1.5em;
@@ -350,11 +375,22 @@ thead {
 
 table {
   background-color: #e9f1f7;
-  width: 50%; }
+  width: 100%; }
 
-th::after, th::before {
-  content: '-';
-  white-space: nowrap; }
+@media screen and (max-width: 650px) {
+  table th {
+    display: none; }
+  table tr td {
+    display: block;
+    text-align: right;
+    position: relative; }
+  table tr td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    padding-left: 1em;
+    transition: 500ms ease; } }
 
 section {
   margin-bottom: 150px; }
