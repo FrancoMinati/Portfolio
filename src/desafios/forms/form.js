@@ -89,6 +89,7 @@ btnSolicitud.addEventListener("click", function mostrar_Solicitudes(e) {
     for (let i = 1; i <= id; i++) {
         let solicitudLs = JSON.parse(localStorage.getItem(i));
         const tr = document.createElement('tr')
+        
         tr.innerHTML = `<td data-label="Nombre"> ${solicitudLs.nombre}</td> 
                       <td data-label="Apellido">${solicitudLs.apellido}</td>
                       <td data-label="Email">${solicitudLs.email}</td> 

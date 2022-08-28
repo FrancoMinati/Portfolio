@@ -364,26 +364,30 @@ button:hover {
   border: 1px #0c55b7 solid;
   transition: 500ms ease-in; }
 
-table,
-th,
-tr,
-td,
-tbody,
-thead {
-  border: 1px solid gainsboro;
-  text-align: center; }
+th {
+  background-color: #7d29ee;
+  color: white; }
 
-table {
-  background-color: #e9f1f7;
-  width: 100%; }
+th,
+td {
+  text-align: center;
+  padding: 5px; }
+
+tbody, th, tr, td {
+  border: 1px solid gainsboro; }
 
 @media screen and (max-width: 650px) {
   table th {
     display: none; }
-  table tr td {
+  table tbody tr td {
     display: block;
     text-align: right;
-    position: relative; }
+    position: relative;
+    padding-bottom: 1em; }
+  table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    background-color: white; }
   table tr td::before {
     content: attr(data-label);
     position: absolute;
