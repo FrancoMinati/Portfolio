@@ -64,44 +64,4 @@ function ocultar(){
     hexArray[0].querySelector(".hex-txt").style.visibility="hidden"
 }
 */
-let stackT = document.querySelector("#t-stack")
-let logoHtml = document.querySelector("#logo-1")
-console.log(stackT)
-window.addEventListener('resize', function ponerColumna() {
-    window.innerWidth < 1000 ? (
-        stackT.classList.add("flex-column", "align-items-center"),
-        document.querySelector("#logos-col-1").classList.add("flex-column"),
-        document.querySelector("#logos-col-2").classList.remove("justify-content-center"),
-        document.querySelector("#logos-col-2").classList.add("flex-column"))
-        : (stackT.classList.remove("flex-column", "align-items-center"),
-            document.querySelector("#logos-col-2").classList.add("justify-content-center"),
-            document.querySelector("#logos-col-1").classList.remove("flex-column"),
-            document.querySelector("#logos-col-2").classList.remove("flex-column"))
-});
-
-const mostrarN = document.querySelector("#nombre");
-//Counter es para evitar que hay mas de span
-let counter = 0;
-mostrarN.addEventListener("mouseenter", function mostrarNombre(e) {
-
-
-    if (counter == 0) {
-        const span = document.createElement('span');
-        span.innerHTML = `<span class="nombre" id="spanName">${"Franco Martin Minati"}</span>`
-        mostrarN.appendChild(span);
-        counter++
-    }
-
-})
-
-mostrarN.addEventListener("mouseleave", function quitarNombre(e) {
-    setTimeout(() => {
-        if (document.querySelector("#spanName") != null) {
-            document.querySelector("#spanName").remove();
-            counter--
-        }
-    }, 1500)
-
-})
-
 
