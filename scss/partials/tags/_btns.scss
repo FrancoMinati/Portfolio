@@ -4,6 +4,8 @@ button{
     background-color: $color-3;
     color: #fff;
     border: 1px $color-7 solid;
+    border-radius: 1em;
+    font-weight: 500;
 }
 button:hover{
     background-color: $color-1;

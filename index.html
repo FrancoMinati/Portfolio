@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-expand-md ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="images/logo-w.png" alt="" class="img-logo"></a>
+                <a class="navbar-brand" href="#" id="nombre"><img src="images/logo-w.png" alt="" class="img-logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -28,11 +28,10 @@
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                     <div class="mx-auto"></div>
                     <div class="navbar-nav ">
-                        <a class="list-item txt" href="#">Inicio</a>
-                        <a class="list-item txt" href="#">Acerca de</a>
-                        <a class="list-item txt" href="#">Proyectos</a>
-                        <a class="list-item txt ">Contacto</a>
-                        <a class="list-item txt" id="colorChange"><i class="bi bi-lightbulb-fill" id="lamp"></i></a>
+                        <a class="list-item navtxt-n" href="#">Inicio</a>
+                        <a class="list-item navtxt-n" href="#">Proyectos</a>
+                        <a class="list-item navtxt-n" href="#">Acerca de</a>
+                        <a class="list-item navtxt  " href="">Contacto</a>           
                     </div>
 
 
@@ -98,7 +97,7 @@
             </div>
         </section>
         <!-- Informacion personal-->
-        <section id="acercaDe">
+<!--         <a class="list-item" data-label="" href="" id="colorChange"><i class="bi bi-lightbulb-fill" id="lamp"></i></a>-->        <section id="acercaDe">
             <div class="container shadow-lg d-flex flex-column">
                 <div class="img-container mx-auto">
                     <img src="images/foto-perf2.jpeg" alt="me" class="img-show ">
@@ -125,24 +124,35 @@
                             tener
                             un acercamiento cuando estudiaba Ingeniería. Mi objetivo es convertirme en un gran Front-End
                             Developer y me capacito día a día para ello.
-                            Actualmente estoy buscando trabajo, con muchas ganas de seguir aprendiendo, Considero que
-                            tengo
-                            buen gusto, aprendo rapido, me gusta el diseño y el dibujado, responsable, puedo trabajar en
-                            grupo, tengo facilidad para la resolución de
-                            problemas.
+                            Actualmente estoy buscando trabajo, con muchas ganas de seguir aprendiendo.
+                            <hr>
+                            Entre mis cualidades considero que poseo: <br><br>
+                        <ul>
+                            <li>Buen gusto</li>
+                            <li>Aprendizaje rapido y responsabilidad</li>
+                            <li>Gusto por el diseño y el dibujado</li>
+                            <li>Facilidad para el trabajo en grupo</li>
+                            <li>Capacidad para la resolucion de problemas</li>
+                        </ul>
                         </p>
                     </div>
                     <div class="row mt-3 d-flex ">
                         <div class="col  mx-auto">
-                            <h2 class="txt-title pb-2">Stack Tecnologico</h2>
-                            <div class="d-flex flex-wrap justify-content-around " id="t-stack">
-                                <img src="images/logos/html-5.png" alt="" class="img-stack-logo">
-                                <img src="images/logos/css.png" alt="" class="img-stack-logo">
-                                <img src="images/logos/sass.png" alt="" class="img-stack-logo">
-                                <img src="images/logos/bootstrap.png" alt="" class="img-stack-logo">
-                                <img src="images/logos/js.png" alt="" class="img-stack-logo">
-                                <img src="images/logos/java.png" alt="" class="img-stack-logo">
-                                <img src="images/logos/git.png" alt="" class="img-stack-logo">
+                            <h2 class="txt-title pb-2 text-center">Stack Tecnologico</h2>
+                            <div class="d-flex flex-wrap justify-content-center " id="t-stack">
+                                <div class="row">
+                                    <div class="col d-flex justify-content-center" id="logos-col-1">
+                                        <img src="images/logos/html-5.png" alt="" class="img-stack-logo">
+                                        <img src="images/logos/css.png" alt="" class="img-stack-logo">
+                                        <img src="images/logos/sass.png" alt="" class="img-stack-logo">
+                                        <img src="images/logos/js.png" alt="" class="img-stack-logo">
+                                    </div>
+                                    <div class="col d-flex justify-content-center" id="logos-col-2">
+                                        <img src="images/logos/bootstrap.png" alt="" class="img-stack-logo">
+                                        <img src="images/logos/java.png" alt="" class="img-stack-logo">
+                                        <img src="images/logos/git.png" alt="" class="img-stack-logo">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -213,7 +223,7 @@
         </section>
         <section id="solicitudes">
             <div class="container shadow-lg px-4  py-4 d-flex flex-column align-items-center">
-                <button class="mx-auto mb-3" id="btn-solicitud">Solicitudes</button>
+                <button class="mx-auto mb-3" id="btn-solicitud">Solicitudes <i class="bi bi-inbox-fill"></i></button>
                 <table id="tabla-solicitudes">
                     <thead>
                         <th>Nombre</th>

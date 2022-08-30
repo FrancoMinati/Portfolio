@@ -85,7 +85,7 @@ btnSolicitud.addEventListener("click", function mostrar_Solicitudes(e) {
         tbody.removeChild(child);
         child = tbody.lastElementChild;
     }
-
+    document.querySelector("#tabla-solicitudes").style.visibility="visible"
     for (let i = 1; i <= id; i++) {
         let solicitudLs = JSON.parse(localStorage.getItem(i));
         const tr = document.createElement('tr')

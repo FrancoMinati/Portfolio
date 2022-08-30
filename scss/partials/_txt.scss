@@ -21,26 +21,10 @@ body {
 .txt {
   @include text();
   font-family: "Karla", sans-serif;
-  &-nav {
-    @extend .txt;
-    font-family: "Comfortaa", sans-serif;
-  }
   &-title {
     @extend .txt;
     font-size: $font-size-t;
-    font-family: "Bebas Neue",cursive;
-
-    &-b {
-      @extend .txt-title;
-      color: black;
-    }
-  }
-  &-black {
-    @extend .txt;
-    color: black;
-  }
-  a &:hover {
-    color: $color-3;
+    font-family: "Bebas Neue", cursive;
   }
 }
 blockquote::before {
@@ -50,15 +34,15 @@ blockquote::after {
   content: close-quote;
 }
 
-a{
+a {
   text-decoration: none;
   color: $color-black;
 }
-a:hover{
+a:hover {
   color: $color-3;
 }
-@media screen and (max-width:768px){
-body{
-  font-size: 1em;
-}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1em;
+  }
 }

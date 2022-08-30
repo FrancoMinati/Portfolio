@@ -26,6 +26,9 @@
   }
 }
 //Input  styles
+input,select,option{
+  font-size: 1em;
+}
 input[type="text"] {
   border: hidden;
   border-bottom: 1px solid gainsboro;
@@ -46,6 +49,8 @@ input[type="submit"] {
   border: 2px solid $color-7;
   background-color: $color-3;
   color: white;
+  border-radius: 1em;
+  
 }
 input[type="submit"]:hover {
   background-color: $color-1;
@@ -85,12 +90,12 @@ fieldset {
   }
   &::before {
     background-color: $color-3;
-    left: 5%;
+    left: 7%;
     top: 0;
   }
   &::after {
     background-color: $color-3;
-    right: 5%;
+    right: 7%;
     top: 0;
   }
 }
@@ -102,8 +107,10 @@ input[select] {
   height: 2em;
 }
 
-@media screen and (max-width:650px) {
-  
+@media screen and (max-width:550px) {
+  input,select,option{
+    font-size: 0.8em;
+  }
   .form-div {
     padding: 2em 2em;
     width: 100%;
