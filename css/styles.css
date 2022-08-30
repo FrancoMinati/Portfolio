@@ -364,10 +364,24 @@ button:hover {
   border: 1px #0c55b7 solid;
   transition: 500ms ease-in; }
 
+<<<<<<< HEAD
 table {
   width: 100%;
   text-align: center;
   margin-top: 1em; }
+=======
+th {
+  background-color: #7d29ee;
+  color: white; }
+
+th,
+td {
+  text-align: center;
+  padding: 5px; }
+
+tbody, th, tr, td {
+  border: 1px solid gainsboro; }
+>>>>>>> da335549ebbeb3efcd5d21d1b82e97a458fa2321
 
 th {
   background-color: #7d29ee;
@@ -399,6 +413,7 @@ table tr:last-child {
     background-color: white; }
   table th {
     display: none; }
+<<<<<<< HEAD
   table tr td {
     display: flex;
     flex-direction: column;
@@ -412,6 +427,17 @@ table tr:last-child {
     border-bottom: 1px solid #7718f3; }
   table tr td:nth-child(even) {
     background-color: gainsboro; }
+=======
+  table tbody tr td {
+    display: block;
+    text-align: right;
+    position: relative;
+    padding-bottom: 1em; }
+  table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    background-color: white; }
+>>>>>>> da335549ebbeb3efcd5d21d1b82e97a458fa2321
   table tr td::before {
     content: attr(data-label);
     display: flex;

@@ -89,6 +89,7 @@ btnSolicitud.addEventListener("click", function mostrar_Solicitudes(e) {
     for (let i = 1; i <= id; i++) {
         let solicitudLs = JSON.parse(localStorage.getItem(i));
         const tr = document.createElement('tr')
+        
         tr.innerHTML = `<td data-label="Nombre"> ${solicitudLs.nombre}</td> 
                       <td data-label="Apellido">${solicitudLs.apellido}</td>
                       <td data-label="Email">${solicitudLs.email}</td> 
@@ -98,5 +99,44 @@ btnSolicitud.addEventListener("click", function mostrar_Solicitudes(e) {
         tbody.appendChild(tr);
 
     }
+
+})
+let stackT = document.querySelector("#t-stack")
+let logoHtml = document.querySelector("#logo-1")
+console.log(stackT)
+window.addEventListener('resize', function ponerColumna() {
+    window.innerWidth < 1000 ? (
+        stackT.classList.add("flex-column", "align-items-center"),
+        document.querySelector("#logos-col-1").classList.add("flex-column"),
+        document.querySelector("#logos-col-2").classList.remove("justify-content-center"),
+        document.querySelector("#logos-col-2").classList.add("flex-column"))
+        : (stackT.classList.remove("flex-column", "align-items-center"),
+            document.querySelector("#logos-col-2").classList.add("justify-content-center"),
+            document.querySelector("#logos-col-1").classList.remove("flex-column"),
+            document.querySelector("#logos-col-2").classList.remove("flex-column"))
+});
+
+const mostrarN = document.querySelector("#nombre");
+//Counter es para evitar que hay mas de span
+let counter = 0;
+mostrarN.addEventListener("mouseenter", function mostrarNombre(e) {
+
+
+    if (counter == 0) {
+        const span = document.createElement('span');
+        span.innerHTML = `<span class="nombre" id="spanName">${"Franco Martin Minati"}</span>`
+        mostrarN.appendChild(span);
+        counter++
+    }
+
+})
+
+mostrarN.addEventListener("mouseleave", function quitarNombre(e) {
+    setTimeout(() => {
+        if (document.querySelector("#spanName") != null) {
+            document.querySelector("#spanName").remove();
+            counter--
+        }
+    }, 1500)
 
 })

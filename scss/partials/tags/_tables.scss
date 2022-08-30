@@ -1,91 +1,92 @@
 //Ocupar ancho maximo y centrado de texto
 table {
-  width: 100%;
-  text-align: center;
-  margin-top: 1em;
-}
-th {
-  background-color: $color-3;
-  color: #fff;
-  padding: .25em 0em;
-}
-table tr td {
-  padding: 1em 0em;
-  font-weight: 500;
-}
-table tr {
-  border-right: 1px solid $color-7;
-  border-left: 1px solid $color-7;
-}
-table tr:nth-child(even) {
-  background-color: gainsboro;
-  border-bottom: gainsboro;
-}
-table tr:last-child{
-    border-bottom: 1px solid $color-7;
-}
-//Particular para mostrarla con funcion js
-#tabla-solicitudes {
-  visibility: hidden;
-}
-@media screen and (max-width: 550px) {
-  //Para separar las filas
-  table {
-    border-collapse: separate;
-    border-spacing: 0 15px;
-    background-color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
   }
-  //Para ocultar la cabecera normal de la tabla
-  table th {
-    display: none;
+  th {
+    background-color: $color-3;
+    color: #fff;
+    padding: .25em 0em;
   }
-  //Mostrar las columnas verticalmente y estilado
   table tr td {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: right;
-    position: relative;
-    padding: 1em 1em;
-    border-bottom: none;
+    padding: 1em 0em;
+    font-weight: 500;
+  }
+  table tr {
+    border-right: 1px solid $color-7;
     border-left: 1px solid $color-7;
   }
-  table tr td:last-child {
-    border-bottom: 1px solid $color-7;
-  }
-  //Sombreado entre filas
-  table tr td:nth-child(even) {
+  table tr:nth-child(even) {
     background-color: gainsboro;
+    border-bottom: gainsboro;
   }
-  //Nueva cabecera
-  table tr td::before {
-    content: attr(data-label);
-    //Distribution
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    left: -2px;
-    top: -1px;
-    height: 108%;
-    width: 80px;
-    //Aesthetic
-    padding-left: 1em;
-    font-weight: bold;
-    text-align: left;
-    transition: 500ms ease;
-    background-color: $color-3;
-    border-bottom: 1px solid $color-7;
-    border-top: 1px solid $color-7;
-    border-right: 1px solid $color-7;
-    color: #fff;
+  table tr:last-child{
+      border-bottom: 1px solid $color-7;
   }
-
-  tr,
-  td {
-    background-color: #fff;
-    border: 1px solid $color-7;
-    font-size: 0.8em;
-    font-weight: 700;
+  //Particular para mostrarla con funcion js
+  #tabla-solicitudes {
+    visibility: hidden;
   }
-}
+  @media screen and (max-width: 550px) {
+    //Para separar las filas
+    table {
+      border-collapse: separate;
+      border-spacing: 0 15px;
+      background-color: white;
+    }
+    //Para ocultar la cabecera normal de la tabla
+    table th {
+      display: none;
+    }
+    //Mostrar las columnas verticalmente y estilado
+    table tr td {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: right;
+      position: relative;
+      padding: 1em 1em;
+      border-bottom: none;
+      border-left: 1px solid $color-7;
+    }
+    table tr td:last-child {
+      border-bottom: 1px solid $color-7;
+    }
+    //Sombreado entre filas
+    table tr td:nth-child(even) {
+      background-color: gainsboro;
+    }
+    //Nueva cabecera
+    table tr td::before {
+      content: attr(data-label);
+      //Distribution
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      left: -2px;
+      top: -1px;
+      height: 108%;
+      width: 80px;
+      //Aesthetic
+      padding-left: 1em;
+      font-weight: bold;
+      text-align: left;
+      transition: 500ms ease;
+      background-color: $color-3;
+      border-bottom: 1px solid $color-7;
+      border-top: 1px solid $color-7;
+      border-right: 1px solid $color-7;
+      color: #fff;
+    }
+  
+    tr,
+    td {
+      background-color: #fff;
+      border: 1px solid $color-7;
+      font-size: 0.8em;
+      font-weight: 700;
+    }
+  }
+  
