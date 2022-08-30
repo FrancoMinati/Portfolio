@@ -116,6 +116,15 @@ window.addEventListener('resize', function ponerColumna() {
             document.querySelector("#logos-col-2").classList.remove("flex-column"))
 });
 
+window.innerWidth < 1000 ? (
+    stackT.classList.add("flex-column", "align-items-center"),
+    document.querySelector("#logos-col-1").classList.add("flex-column"),
+    document.querySelector("#logos-col-2").classList.remove("justify-content-center"),
+    document.querySelector("#logos-col-2").classList.add("flex-column"))
+    : (stackT.classList.remove("flex-column", "align-items-center"),
+        document.querySelector("#logos-col-2").classList.add("justify-content-center"),
+        document.querySelector("#logos-col-1").classList.remove("flex-column"),
+        document.querySelector("#logos-col-2").classList.remove("flex-column"))
 const mostrarN = document.querySelector("#nombre");
 //Counter es para evitar que hay mas de span
 let counter = 0;
