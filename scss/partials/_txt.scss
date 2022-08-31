@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;500&family=Oswald:wght@300&display=swap");
 $font-size: 1.1em;
 $font-size-t: 2.2em;
 $font-bold: 600;
@@ -41,8 +41,130 @@ a {
 a:hover {
   color: $color-3;
 }
+
+.banner {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  height: 600px;
+  &-flag {
+    height: 400px;
+    width: 250px;
+    background-color: $color-3;
+    //Display
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    & h3 {
+      margin-top: 2em;
+      color: $color-0;
+      font-size: 1.2em;
+      padding: 0em 1em;
+      text-align: center;
+    }
+    & p {
+      margin-top: 2em;
+      color: $color-0;
+      font-size: 1em;
+      padding: 0em 1em;
+      text-align: center;
+    }
+  }
+  &-pos {
+    display: flex;
+    justify-content: center;
+  }
+  &-circle-l {
+    width: 250px;
+    height: 250px;
+    background-color: $color-3;
+    border: 8px solid $color-0;
+    border-radius: 50%;
+    position: absolute;
+    top: 70%;
+    &::after {
+      content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'  fill='%237d29ee' viewBox='0 0 16 16'><path d='M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z'/></svg>");
+      width: 95%;
+      height: 95%;
+      top: 3%;
+      left: 3%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-3;
+
+      position: absolute;
+      border-radius: 50%;
+      background-color: white;
+    }
+  }
+  &-circle-r {
+    @extend .banner-circle-l;
+    &::after {
+      content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'  fill='%237d29ee'  viewBox='0 0 16 16'><path d='M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z'/><path d='M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z'/></svg>");
+      width: 95%;
+      height: 95%;
+      top: 3%;
+      left: 2.5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-3;
+
+      position: absolute;
+      border-radius: 50%;
+      background-color: white;
+    }
+  }
+
+  &-mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-prof {
+    font-family: "Oswald", sans-serif;
+    font-size: 3em;
+    background-color: $color-3;
+    color: $color-0;
+    padding: 0.25em;
+    position: relative;
+    font-weight: 100;
+  }
+  &-name {
+    font-family: "Oswald", sans-serif;
+    font-size: 3.5em;
+    font-weight: bold;
+  }
+}
+
+h1 {
+  margin: 1em 0 3em 0;
+  font-size: 4em;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  position: relative;
+}
 @media screen and (max-width: 768px) {
   body {
     font-size: 1em;
+  }
+  h1{
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1em;
+  }
+  h1{
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #banner {
+    display: none;
   }
 }
