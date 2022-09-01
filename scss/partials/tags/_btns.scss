@@ -12,3 +12,7 @@ button:hover{
     border: 1px $color-4 solid;
     transition: 500ms ease-in;
 }
+#btn-delete-solicitud{
+    padding: 0.2em .5em ;
+    display: none;
+}

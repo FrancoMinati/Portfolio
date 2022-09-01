@@ -1,60 +1,10 @@
-@import "scss/partials/colors";
-@import "scss/partials/txt";
-@import "scss/partials/imgs";
-@import "scss/partials/hex";
+@import "scss/partials/abstract/colors";
+@import "scss/partials/abstract/txt";
+@import "scss/partials/tags/imgs";
+@import "scss/partials/ideas/hex";
 @import "scss/partials/tags/form";
+@import "scss/partials/tags/tags";
 @import "scss/partials/tags/btns";
 @import "scss/partials/tags/tables";
 
-section {
-  margin-bottom: 150px;
-}
-// Paleta de colores
 
-body {
-  /*  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(111, 65, 217, 1) 0%,
-    rgba(77, 29, 164, 1) 30%,
-    rgba(36, 10, 108, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
-  ); */
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
-}
-header,
-nav {
-  min-height: 120px;
-  max-height: 200px;
-  display: block;
-}
-//Posibles 6
-
-//Backgrounds
-.bkg {
-  &-blue {
-    background-color: #2274a5;
-  }
-  &-sand {
-    background-color: #e7dfc6;
-  }
-  &-snow {
-    background-color: #e9f1f7;
-  }
-  &-black {
-    background-color: #131b23;
-  }
-  &-dust {
-    background-color: #816c61;
-  }
-  &-gradient {
-    background: linear-gradient(
-      180deg,
-      rgba(111, 65, 217, 1) 0%,
-      rgba(77, 29, 164, 1) 50%,
-      rgba(36, 10, 108, 1) 90%
-    );
-  }
-}

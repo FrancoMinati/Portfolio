@@ -44,49 +44,49 @@
             <div class="container">
                 <div class="hex-gallery">
                     <div class="hex ">
-                        <img src="images/fotos-v (1).jpg" alt="" class="hex-img">
+                        <img src="" alt="" class="hex-img">
                         <div class="hex-txt">
                             <h2 class="hex-title"> Some Title</h2>
                             <p class="hex-body">A brief description of the content</p>
                         </div>
                     </div>
                     <div class="hex ">
-                        <img src="images/fotos-v (2).jpg" alt="" class="hex-img">
+                        <img src="" alt="" class="hex-img">
                         <div class="hex-txt">
                             <h2 class="hex-title"> Some Title</h2>
                             <p class="hex-body">A brief description of the content</p>
                         </div>
                     </div>
                     <div class="hex ">
-                        <img src="images/fotos-v (3).jpg" alt="" class="hex-img">
+                        <img src="" alt="" class="hex-img">
                         <div class="hex-txt">
                             <h2 class="hex-title"> Some Title</h2>
                             <p class="hex-body">A brief description of the content</p>
                         </div>
                     </div>
                     <div class="hex ">
-                        <img src="images/ff-logo.png" alt="" class="hex-img">
+                        <img src="" alt="" class="hex-img">
                         <div class="hex-txt">
                             <h2 class="hex-title"> Some Title</h2>
                             <p class="hex-body">A brief description of the content</p>
                         </div>
                     </div>
                     <div class="hex ">
-                        <img src="images/fotos-v (4).jpg" alt="" class="hex-img">
+                        <img src="" alt="" class="hex-img">
                         <div class="hex-txt">
                             <h2 class="hex-title"> Some Title</h2>
                             <p class="hex-body">A brief description of the content</p>
                         </div>
                     </div>
                     <div class="hex ">
-                        <img src="images/fotos-v (5).jpg" alt="" class="hex-img">
+                        <img src="" alt="" class="hex-img">
                         <div class="hex-txt">
                             <h2 class="hex-title"> Some Title</h2>
                             <p class="hex-body">A brief description of the content</p>
                         </div>
                     </div>
                     <div class="hex ">
-                        <img src="images/logo-b.png" alt="" class="hex-img">
+                        <img src="" alt="" class="hex-img">
                         <div class="hex-txt">
                             <h2 class="hex-title"> Some Title</h2>
                             <p class="hex-body">A brief description of the content</p>
@@ -100,7 +100,7 @@
         <section id="acercaDe">
             <div class="container shadow-lg d-flex flex-column">
                 <div class="img-container mx-auto">
-                    <img src="images/foto-perf2.jpeg" alt="me" class="img-show ">
+                    <img src="images/common-use/foto-perf2.jpeg" alt="me" class="img-show ">
                     <div class="img-txt">
                         <h2 class="img-title">Franco Martin Minati</h2>
                         <p class="img-text">This is me</p>
@@ -166,22 +166,22 @@
                 <div class="row">
                     <div class="col d-flex flex-column justify-content-center align-items-center">
                         <div class="img-container shadow-lg">
-                            <img src="images/ff-logo.png" alt="flipflopin-logo" class="img-show">
+                            <img src="images/logos/ff-logo.png" alt="flipflopin-logo" class="img-show">
                             <div class="img-txt">
                                 <h2 class="img-title">Flip-Floppin</h2>
                                 <p class="img-text ">E-commerce</p>
                             </div>
                         </div>
                         <div class="img-container shadow-lg">
-                            <img src="images/coming-soon.jpg" alt="coming-soon" class="img-show">
+                            <img src="images/common-use/coming-soon.jpg" alt="coming-soon" class="img-show">
                         </div>
                     </div>
                     <div class="col d-flex flex-column justify-content-center align-items-center">
                         <div class="img-container shadow-lg">
-                            <img src="images/coming-soon.jpg" alt="coming-soon" class="img-show">
+                            <img src="images/common-use/coming-soon.jpg" alt="coming-soon" class="img-show">
                         </div>
                         <div class="img-container shadow-lg">
-                            <img src="images/coming-soon.jpg" alt="coming-soon" class="img-show">
+                            <img src="images/common-use/coming-soon.jpg" alt="coming-soon" class="img-show">
                         </div>
                     </div>
                 </div>
@@ -224,7 +224,10 @@
         <section id="solicitudes">
 
             <div class="container shadow-lg px-4  py-4 d-flex flex-column align-items-center">
-                <button class="mx-auto mb-3" id="btn-solicitud">Solicitudes <i class="bi bi-inbox-fill"></i></button>
+                <div id="btns-solicitudes" class="d-flex justify-content-center mx-auto ">
+                    <button  id="btn-solicitud">Solicitudes <i class="bi bi-inbox-fill"></i></button>
+                    <button id="btn-delete-solicitud"><i class="bi bi-trash3-fill"></i> </button>
+                </div>
                 <table id="tabla-solicitudes">
                     <thead>
                         <th>Nombre</th>
@@ -233,20 +236,20 @@
                         <th>Numero</th>
                         <th>Motivo</th>
                     </thead>
-                    <tbody id="body">
+                    <tbody id="table-body">
                     </tbody>
                 </table>
             </div>
         </section>
         <section id="redes sociales"></section>
     </div>
-    <!--     <a href="https://www.flaticon.es/iconos-gratis/css" title="css iconos">Css iconos creados por Freepik - Flaticon</a>
- -->
 </body>
+<!--SweetAlert-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!--Codigo modularizado-->
+<script src="src/main.js" type="module"></script>
 
-<script src="src/desafios/forms/form.js"></script>
-<script src="src/desafioDOM.js"></script>
-<!--CLASE 9 Y 10 <script src="src//practicaStorage.js"></script> -->
+<!--Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
