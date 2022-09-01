@@ -7,4 +7,4 @@ enviar.addEventListener("click",crear_Solicitud )
 btnSolicitud.addEventListener("click", mostrar_Solicitudes)
 btnDelete.addEventListener("click",deleteTableContent)
 
-export * from '/CSSBase/src/form/form.js';
+export * from './form.js';

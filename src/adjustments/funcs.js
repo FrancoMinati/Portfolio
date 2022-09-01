@@ -13,6 +13,5 @@ function ponerColumna() {
             document.querySelector("#logos-col-2").classList.remove("flex-column"))
 }
 
-window.addEventListener("resize",ponerColumna)
-ponerColumna();
-export * as adjust from './adjustments/funcs.js'
+
+export {ponerColumna};

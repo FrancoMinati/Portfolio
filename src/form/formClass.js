@@ -1,4 +1,4 @@
-import {formulario,nombre,apellido,email,numero,motivo,enviar,solicitudes} from './formElements.js'
+import {email,numero} from './formElements.js'
 export default class Formulario {
     constructor(nombre, apellido, email, numero, motivo) {
         this.nombre = nombre;

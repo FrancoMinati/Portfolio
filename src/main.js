@@ -1,6 +1,6 @@
-import * as adjust from "./adjustments/funcs.js";
+import { ponerColumna } from "./adjustments/funcs.js";
 import * as form from "./form/form.js";
 //Column re-positioning when window resizes
-
-adjust;
+window.addEventListener("resize",ponerColumna)
+ponerColumna();
 form;
