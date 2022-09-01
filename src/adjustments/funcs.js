@@ -15,4 +15,4 @@ function ponerColumna() {
 
 window.addEventListener("resize",ponerColumna)
 ponerColumna();
-export * as adjust from '/CSSBase/src/adjustments/funcs.js'
+export * as adjust from './adjustments/funcs.js'

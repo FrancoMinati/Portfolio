@@ -1,6 +1,6 @@
 //Guardado local
-import Formulario from '/CSSBase/src/form/formClass.js'
-import { nombre, apellido, email, numero, motivo, solicitudes,tableBody, btnDelete, btnBar } from '/CSSBase/src/form/formElements.js'
+import Formulario from './formClass.js'
+import { nombre, apellido, email, numero, motivo, solicitudes,tableBody, btnDelete, btnBar } from '/src/form/formElements.js'
 
 
 const guardadoLocal = (key, value) => { localStorage.setItem(key, value); }

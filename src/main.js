@@ -1,5 +1,5 @@
-import * as adjust from "/CSSBase/src/adjustments/funcs.js";
-import * as form from "/CSSBase/src/form/form.js";
+import * as adjust from "./adjustments/funcs.js";
+import * as form from "./form/form.js";
 //Column re-positioning when window resizes
 
 adjust;
