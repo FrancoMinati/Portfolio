@@ -1,35 +1,35 @@
 [
 {
-    "url" : "url(/CSSBase/images/logos/bootstrap.png)",
+    "url" : "url(./images/logos/bootstrap.png)",
     "color": "#5e3b7f"
 },
 {
-    "url" : "url(/CSSBase/images/logos/js.png)",
+    "url" : "url(./images/logos/js.png)",
     "color": "#ffdf00"
 },
 {
-    "url" : "url(/CSSBase/images/logos/css.png)",
+    "url" : "url(./images/logos/css.png)",
     "color": "#006bc0"
 },
 {
-    "url" : "url(/CSSBase/images/logos/html-5.png)",
+    "url" : "url(./images/logos/html-5.png)",
     "color": "#ff4c1e"
 },
 {
-    "url" : "url(/CSSBase/images/logos/git.png)",
+    "url" : "url(./images/logos/git.png)",
     "color": "#f15233"
 },
 {
-    "url" : "url(/CSSBase/images/logos/github.png)",
+    "url" : "url(./images/logos/github.png)",
     "color": "#000"
 },
 {
-    "url" : "url(/CSSBase/images/logos/java.png)",
+    "url" : "url(./images/logos/java.png)",
     "color": "#000"
     
 },
 {
-    "url" : "url(/CSSBase/images/logos/sass.png)",
+    "url" : "url(./images/logos/sass.png)",
     "color": "#cc6699"
 }
 ]

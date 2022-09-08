@@ -12,7 +12,8 @@ function ponerColumna() {
             document.querySelector("#logos-col-1").classList.remove("flex-column"),
             document.querySelector("#logos-col-2").classList.remove("flex-column"))
 }
-
+//Cargo los colores e imagenes de las tarjetas desde un json para no tener que cargarlas con estilos en linea o crear demasiadas clases,
+//ademas podria permitirme escalar las tarjetas a futuro simplemente agregando al json
 function chargeCardImages(){
     const cards=document.querySelectorAll(".card-front");
     const cardsBack=document.querySelectorAll(".card-back")
