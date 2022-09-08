@@ -1,18 +1,21 @@
 const obtenerPokemon = document.querySelector("#pokeInput");
 const buscarPokemon = document.querySelector("#pokeSubmit");
 const pokeAPISection=document.querySelector("#proyectos-pokeAPI")
+//La seccion se mantiene oculta hasta que se presione el circulo de proyectos de la pokeapi
 pokeAPISection.addEventListener("click",()=>{
     document.querySelector("#pokeAPI").style.display="block";
 });
 buscarPokemon.addEventListener("click", () => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${obtenerPokemon.value.toLowerCase()}/`)
             .then((res) => res.json())
+            //llama a la funcion y usa un alert si todo sale bien
             .then((data) => {createPokemonCard(data),
                 Swal.fire({
                 icon: 'success',
                 title: 'Enhorabuena',
                 text: 'Aqui esta tu: '+obtenerPokemon.value+"!"
               })})
+              //si la promesa no se cumpla tira el alert
               .catch(
                 Swal.fire({
                     icon: 'error',
