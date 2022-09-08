@@ -6,6 +6,7 @@ pokeAPISection.addEventListener("click",()=>{
     document.querySelector("#pokeAPI").style.display="block";
 });
 buscarPokemon.addEventListener("click", () => {
+    setTimeout(()=>{
         fetch(`https://pokeapi.co/api/v2/pokemon/${obtenerPokemon.value.toLowerCase()}/`)
             .then((res) => res.json())
             //llama a la funcion y usa un alert si todo sale bien
@@ -24,6 +25,8 @@ buscarPokemon.addEventListener("click", () => {
                     footer: '<p>Quizas escribiste mal su nombre</p>'
                   })
               )
+    },1500)
+        
     }
 )
 function createPokemonCard(pokemon) {
