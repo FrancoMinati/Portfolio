@@ -36,6 +36,7 @@ transition: 250ms ease-in;
   border: 9px solid gainsboro;
   border-radius: 50%;
 }
+
 // after and before for hover use
 .img-container::before,
 .img-container::after {
@@ -53,14 +54,17 @@ transition: 250ms ease-in;
 }
 // Text inside imgs
 .img-txt {
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  text-align: center;
+  font-family: "Karla", sans-serif;
   width: 80%;
   transition: opacity ease-out 250ms;
   opacity: 0;
-  top:25%;
-  text-align: center;
-  font-family: "Karla", sans-serif;
+ 
  
 }
 .img-text,

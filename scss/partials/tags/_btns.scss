@@ -1,18 +1,37 @@
-button{
-    padding: .2em 3em;
-    margin-bottom: 1.5em;
-    background-color: $color-3;
-    color: #fff;
-    border: 1px $color-7 solid;
-    border-radius: 1em;
-    font-weight: 500;
+button {
+  padding: 0.2em 3em;
+  margin-bottom: 1.5em;
+  background-color: $color-3;
+  color: #fff;
+  border: 1px $color-7 solid;
+  border-radius: 1em;
+  font-weight: 500;
 }
-button:hover{
-    background-color: $color-1;
-    border: 1px $color-4 solid;
-    transition: 500ms ease-in;
+
+button:hover {
+  background-color: $color-1;
+  border: 1px $color-4 solid;
+  transition: 500ms ease-in;
 }
-#btn-delete-solicitud{
-    padding: 0.2em .5em ;
-    display: none;
+.btn-ref {
+  margin: auto;
+  padding: 0.2em 1em;
+  margin-bottom: 1.5em;
+  background-color: $color-2;
+  color: $color-0;
+  border: 1px $color-7 solid;
+  border-radius: 1em;
+  font-weight: 500;
+  transform: scale(1);
+  transition: color 600ms, transform 600ms;
+  &:hover {
+    color: rgb(255, 255, 183);
+    transform: scale(1.2);
+    transition: color 600ms, transform 300ms;
+  }
+}
+
+#btn-delete-solicitud {
+  padding: 0.2em 0.5em;
+  display: none;
 }

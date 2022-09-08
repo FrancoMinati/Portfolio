@@ -177,13 +177,16 @@ h1 {
   opacity: 0.7; }
 
 .img-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  text-align: center;
+  font-family: "Karla", sans-serif;
   width: 80%;
   transition: opacity ease-out 250ms;
-  opacity: 0;
-  top: 25%;
-  text-align: center;
-  font-family: "Karla", sans-serif; }
+  opacity: 0; }
 
 .img-text,
 .img-title {
@@ -473,7 +476,7 @@ nav {
   display: block; }
 
 button {
-  padding: .2em 3em;
+  padding: 0.2em 3em;
   margin-bottom: 1.5em;
   background-color: #7d29ee;
   color: #fff;
@@ -486,8 +489,24 @@ button:hover {
   border: 1px #0c55b7 solid;
   transition: 500ms ease-in; }
 
+.btn-ref {
+  margin: auto;
+  padding: 0.2em 1em;
+  margin-bottom: 1.5em;
+  background-color: #fb188d;
+  color: #fff;
+  border: 1px #7718f3 solid;
+  border-radius: 1em;
+  font-weight: 500;
+  transform: scale(1);
+  transition: color 600ms, transform 600ms; }
+  .btn-ref:hover {
+    color: #ffffb7;
+    transform: scale(1.2);
+    transition: color 600ms, transform 300ms; }
+
 #btn-delete-solicitud {
-  padding: 0.2em .5em;
+  padding: 0.2em 0.5em;
   display: none; }
 
 table {
@@ -563,3 +582,165 @@ table tr:last-child {
     border: 1px solid #7718f3;
     font-size: 0.8em;
     font-weight: 700; } }
+
+.card-container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  perspective: 1000px; }
+
+.card-holder {
+  margin: 1em 1em 25px 0em;
+  perspective: 1000px; }
+
+.card {
+  width: 250px;
+  height: 320px;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 600ms;
+  border-radius: 1em;
+  box-shadow: 0px 0px 30px -5px gray; }
+
+.pokecard {
+  width: 320px;
+  height: 260px;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 600ms;
+  border-radius: 1em;
+  box-shadow: 0px 0px 30px -5px gray;
+  border: 10px solid #f83df8;
+  background-color: violet; }
+
+.card-holder:hover .card, .card-holder:hover .pokecard {
+  transform: rotateY(180deg); }
+
+.card-front, .card-front-poke,
+.card-back,
+.card-back-poke {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 1em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d; }
+
+.pokeImg {
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #f83df8;
+  border-radius: 1em;
+  box-shadow: 0px 10px 50px 15px #f83df8; }
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 1em; }
+
+
+.card-back,
+.card-back-poke {
+  transform: rotateY(180deg); }
+
+.card-front, .card-front-poke {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center; }
+
+.card-front-body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 1em; }
+
+.card-back-body {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: white; }
+
+.card-back-body h2 {
+  text-align: center;
+  margin-top: 0.5em;
+  font-weight: bold; }
+
+.card-back-body p {
+  margin-top: 30px; }
+
+.card-back-body ul {
+  margin-top: 1em;
+  list-style: "- "; }
+
+.card-back-body li {
+  font-size: .9em;
+  margin-right: 1em;
+  text-align: left; }
+
+.card-back-body input {
+  padding: 10px 20px;
+  margin: 1em auto;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #7d29ee;
+  box-shadow: 1px 1px 30px -5px #7d29ee;
+  border-radius: 10px;
+  transition: box-shadow 600ms, background-color 600ms;
+  position: absolute;
+  bottom: 10px;
+  left: 70px; }
+
+.card-back-body input:hover {
+  box-shadow: 1px 1px 30px -5px #0c55b7;
+  background-color: #0c55b7;
+  transition: box-shadow 600ms, background-color 600ms; }
+
+.card-front-poke {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-weight: bold;
+  text-align: center; }
+  .card-front-poke h2 {
+    text-transform: capitalize;
+    font-family: 'karla',sans-serif; }
+
+.card-back-poke {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-weight: bold;
+  text-align: center; }
+  .card-back-poke h2 {
+    text-transform: capitalize;
+    font-family: 'karla',sans-serif;
+    color: #000; }
+  .card-back-poke ul li {
+    color: black; }
+
+.pokeSearch {
+  text-align: center;
+  font-weight: bold; }
+
+#pokeAPI {
+  display: none; }

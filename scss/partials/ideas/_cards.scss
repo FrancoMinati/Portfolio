@@ -1,61 +1,170 @@
-.card-container{
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
-  }
+.card-container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+.card-holder {
+  margin: 1em 1em 25px 0em;
+  perspective: 1000px;
+}
+.card {
+  width: 250px;
+  height: 320px;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 600ms;
+  border-radius: 1em;
+  box-shadow: 0px 0px 30px -5px gray;
+}
+.pokecard{
+ 
+  width: 320px;
+  height: 260px;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 600ms;
+  border-radius: 1em;
+  box-shadow: 0px 0px 30px -5px gray;
+  border: 10px solid rgb(248, 61, 248);
+  background-color: violet;
   
-  .card{
-    position: relative;
-    width: 500px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+.card-holder:hover .card, .card-holder:hover .pokecard{
+  transform: rotateY(180deg);
+}
+
+
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 1em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+ 
+}
+.pokeImg{
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border: 5px solid rgb(248, 61, 248);
+  border-radius: 1em;
+  box-shadow: 0px 10px 50px 15px rgb(248, 61, 248);
   }
-  .card .face{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: .5s;
-  }
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 1em;
+}
+.card-back {
+  transform: rotateY(180deg);
   
-  .card .front{
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px black;
-    background-color: $color-4;
-    
-  }
-  .card .front h1{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+}
+
+.card-front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-front-body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 1em;
+  
+}
+.card-back-body {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  color: white;
+}
+.card-back-body h2 {
+  text-align: center;
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+.card-back-body p {
+  margin-top: 30px;
+}
+.card-back-body ul {
+  margin-top: 1em;
+  list-style: "- ";
+}
+.card-back-body li {
+  font-size: .9em;
+  margin-right: 1em;
+  text-align: left;
+  
+}
+.card-back-body input {
+  padding: 10px 20px;
+
+  margin: 1em auto;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: $color-3;
+  box-shadow: 1px 1px 30px -5px $color-3;
+  border-radius: 10px;
+  transition: box-shadow 600ms, background-color 600ms;
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+}
+.card-back-body input:hover {
+  box-shadow: 1px 1px 30px -5px $color-4;
+  background-color: $color-4;
+  transition: box-shadow 600ms, background-color 600ms;
+}
+
+.card-front-poke{
+  @extend .card-front;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  & h2{
+    text-transform: capitalize;
+    font-family: 'karla',sans-serif;
+  }}
+  .card-back-poke{
+    @extend .card-back;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-weight: bold;
     text-align: center;
-    
-    color:white
-  }
-  .card .back{
-    transform: perspective(600px) rotateY(180deg);
-    box-shadow: 0 5px 10px black;
-    background-color: $color-2;
-    
-  }
-  .card .back h2{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    text-align: center;
-    color:white
-  }
-  .card:hover .front{
-  transform: perspective(600px) rotateY(180deg);
-  }
-  .card:hover .back{
-    transform: perspective(600px) rotateY(360deg);
+    & h2{
+      text-transform: capitalize;
+      font-family: 'karla',sans-serif;
+      color: $color-01;
     }
+    
+    & ul li{
+      color: black;
+    }
+  }

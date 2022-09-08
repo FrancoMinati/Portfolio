@@ -13,5 +13,25 @@ function ponerColumna() {
             document.querySelector("#logos-col-2").classList.remove("flex-column"))
 }
 
+function chargeCardImages(){
+    const cards=document.querySelectorAll(".card-front");
+    const cardsBack=document.querySelectorAll(".card-back")
+    const xhttp= new XMLHttpRequest();
+    xhttp.open('GET',"/CSSBase/images.json",true);
+    xhttp.send();
+    xhttp.onreadystatechange = function(){
+        if(this.readyState==4 && this.status==200){
+            let urls=JSON.parse(this.responseText);
+            for(let i=0;i<cards.length;i++){
+                let url=urls[i].url;
+                let color=urls[i].color;
+                cards[i].style.backgroundImage=url
+                cardsBack[i].style.backgroundColor=color;
+            }
+        }
+    
+    }
+}
 
-export {ponerColumna};
+
+export {chargeCardImages};
