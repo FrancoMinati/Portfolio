@@ -21,21 +21,8 @@
   border-radius: 1em;
   box-shadow: 0px 0px 30px -5px gray;
 }
-.pokecard{
- 
-  width: 320px;
-  height: 260px;
-  border: none;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: all 600ms;
-  border-radius: 1em;
-  box-shadow: 0px 0px 30px -5px gray;
-  border: 10px solid rgb(248, 61, 248);
-  background-color: violet;
-  
-}
-.card-holder:hover .card, .card-holder:hover .pokecard{
+
+.card-holder:hover .card{
   transform: rotateY(180deg);
 }
 
@@ -53,14 +40,7 @@
   transform-style: preserve-3d;
  
 }
-.pokeImg{
-  margin: auto;
-  width: 150px;
-  height: 150px;
-  border: 5px solid rgb(248, 61, 248);
-  border-radius: 1em;
-  box-shadow: 0px 10px 50px 15px rgb(248, 61, 248);
-  }
+
 .card-bg {
   position: absolute;
   top: 0;
@@ -140,31 +120,3 @@
   transition: box-shadow 600ms, background-color 600ms;
 }
 
-.card-front-poke{
-  @extend .card-front;
-  display: flex;
-  flex-direction: column;
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  & h2{
-    text-transform: capitalize;
-    font-family: 'karla',sans-serif;
-  }}
-  .card-back-poke{
-    @extend .card-back;
-    display: flex;
-    flex-direction: column;
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    & h2{
-      text-transform: capitalize;
-      font-family: 'karla',sans-serif;
-      color: $color-01;
-    }
-    
-    & ul li{
-      color: black;
-    }
-  }
