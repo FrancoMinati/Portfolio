@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;500&family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 body {
   font-family: "Karla", sans-serif;
   text-align: justify;
@@ -713,14 +714,14 @@ table tr:last-child {
 
 .pokeImg {
   margin: auto;
-  width: 70%;
+  width: 65%;
   border-radius: 1em;
   position: absolute;
-  top: 10%; }
+  top: 15%; }
 
 .poke-element-father {
   position: absolute;
-  bottom: 25%;
+  bottom: 22%;
   display: flex;
   width: 100%;
   justify-content: space-around; }
@@ -728,10 +729,11 @@ table tr:last-child {
 .poke-element-s, .poke-element-p {
   text-transform: uppercase;
   font-size: .8em;
-  padding: .1em;
-  width: 80px;
+  padding: 0em .1em;
+  width: 70px;
   border-radius: 1em;
-  border: 2px inset black;
+  border: 3px solid white;
+  outline: 2px solid black;
   box-sizing: content-box; }
 
 .card-front-poke {
@@ -743,7 +745,9 @@ table tr:last-child {
   position: relative; }
   .card-front-poke h2 {
     text-transform: capitalize;
-    font-family: "karla", sans-serif;
+    font-family: "Poppins", cursive;
+    font-weight: 600;
+    font-size: 1.5em;
     position: absolute;
     bottom: 1em; }
   .card-front-poke .poke-number {
@@ -754,10 +758,10 @@ table tr:last-child {
     align-items: center;
     bottom: 0em;
     left: 0em;
-    background-color: lightblue;
+    background-color: lightgray;
     padding: 0.75em 1em;
     border-radius: 0 50% 0 1em;
-    overflow: hidden; }
+    opacity: .9; }
 
 .card-back-poke {
   display: flex;
@@ -765,12 +769,74 @@ table tr:last-child {
   color: black;
   font-weight: bold;
   text-align: center; }
-  .card-back-poke h2 {
+  .card-back-poke .pokeName {
     text-transform: capitalize;
     font-family: "karla", sans-serif;
-    color: #000; }
-  .card-back-poke ul li {
-    color: black; }
+    color: #000;
+    margin-top: .5em;
+    font-size: 1.6em;
+    font-weight: bold;
+    position: relative; }
+  .card-back-poke .pokeName::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    height: 2%;
+    background-color: #8f8f8f; }
+
+.card-back-poke-body {
+  padding: 0.5em;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .card-back-poke-body p {
+    font-size: 0.8em;
+    line-height: 1; }
+
+.card-back-poke h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.15em; }
+
+.card-back-poke-body h3 {
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold; }
+
+.card-back-poke-body input {
+  padding: 10px 20px;
+  margin: 1em auto;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #7d29ee;
+  box-shadow: 1px 1px 30px -5px #7d29ee;
+  border-radius: 10px;
+  transition: box-shadow 600ms, background-color 600ms;
+  position: absolute;
+  bottom: 10px;
+  left: 70px; }
+
+.card-back-poke-body input:hover {
+  box-shadow: 1px 1px 30px -5px #0c55b7;
+  background-color: #0c55b7;
+  transition: box-shadow 600ms, background-color 600ms; }
+
+.pokeStatsContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 5%;
+  top: 8%;
+  font-size: .8em; }
+
+.pokeStats {
+  border-radius: 50%;
+  background-color: white;
+  padding: .4em .2em; }
 
 /* #pokeAPI{
     display: none;

@@ -72,16 +72,25 @@ async function createPokemonCard(pokemon) {
     pokeCardElementF.classList.add("poke-element-father");
     const pokeCardElementE1 = document.createElement('span')
     const pokeCardElementE2 = document.createElement('span')
+    const pokeCardB = document.createElement('div')
+    const pokeStats = document.createElement('div');
+    pokeStats.classList.add("pokeStatsContainer")
+    pokeStats.innerHTML =
+    `<span class="pokeStats">HP</span><span>${pokemon.stats[0].base_stat}</span>
+     <span class="pokeStats">ATK</span><span>${pokemon.stats[1].base_stat}</span>
+     <span class="pokeStats">DEF</span><span>${pokemon.stats[2].base_stat}</span>
+     <span class="pokeStats">SPD</span><span>${pokemon.stats[5].base_stat}</span>`
+    pokeCardF.appendChild(pokeStats)
     checkTypes(pokemon)
         .then(() => {
-        
+
             pokeCardElementF.appendChild(pokeCardElementE1);
             pokeCardElementF.appendChild(pokeCardElementE2);
             pokeCardF.appendChild(pokeCardElementF);
             pokeCardElementE1.classList.add("poke-element-p");
             pokeCardElementE2.classList.add("poke-element-s");
-            pokeCardElementE1.innerHTML=`${pokemon.types[0].type.name}`
-            pokeCardElementE2.innerHTML=`${pokemon.types[1].type.name}`
+            pokeCardElementE1.innerHTML = `${pokemon.types[0].type.name}`
+            pokeCardElementE2.innerHTML = `${pokemon.types[1].type.name}`
 
 
         })
@@ -89,19 +98,21 @@ async function createPokemonCard(pokemon) {
             pokeCardElementF.appendChild(pokeCardElementE1);
             pokeCardF.appendChild(pokeCardElementF);
             pokeCardElementE1.classList.add("poke-element-p");
-            pokeCardElementE1.innerHTML=`${pokemon.types[0].type.name}`
+            pokeCardElementE1.innerHTML = `${pokemon.types[0].type.name}`
         })
     await getTypeColor(pokemon)
-    .then((res)=>{
-        setBgProperties(pokeCardF,res[0]),
-        setBgPropertiesE(pokeCardElementE1,res[0]),
-        setBgPropertiesE(pokeCardElementE2,res[1])
-    })
-    .catch(res2=>{
-        setBgProperties(pokeCardF,res2),
-        setBgPropertiesE(pokeCardElementE1,res2)
-    })
-    
+        .then((res) => {
+            setBgProperties(pokeCardF, res),
+                setBgProperties(pokeCardB, res),
+                setBgPropertiesE(pokeCardElementE1, res[0]),
+                setBgPropertiesE(pokeCardElementE2, res[1])
+        })
+        .catch(res2 => {
+            setBgProperties(pokeCardF, res2),
+                setBgProperties(pokeCardB, res2),
+                setBgPropertiesE(pokeCardElementE1, res2)
+        })
+
 
 
 
@@ -110,17 +121,24 @@ async function createPokemonCard(pokemon) {
 
     //Parte trasera de la pokecarta
     //Ver mas tarde como hacer para ver si tiene mas tipos
-    const pokeCardB = document.createElement('div')
+
     pokeCardB.classList.add("card-back-poke")
     pokeCardB.innerHTML =
-        `<div class="card-back-body">
-    <h2>${pokemon.name}</h2>
-    <hr>
-    <ul>
-    <li>${"Tipo principal: "}${pokemon.types[0].type.name}</li>
-    <li>${"Altura: "}${pokemon.height}</li>
-    </ul>
-    <a href="https://pokemon.fandom.com/es/wiki/${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}" target="_blank" class="btn-ref">Conocer mas</a> `
+        `<h2 class="pokeName">${pokemon.name}</h2>
+        <div class="card-back-poke-body">
+    
+    <h2>Caracteristicas</h2>
+    <h3>Altura</h3>
+    <p>${pokemon.height / 10} mts</p>
+    <h3>Peso</h3>
+    <p>${pokemon.weight / 10} kgs</p>
+    <h3>Especie</h3>
+    <p>${pokemon.species.name}</p>
+    <h3>Habilidad</h3>
+    <p>${pokemon.abilities[0].ability.name}</p>
+    
+    
+     `
 
     pokeCard.appendChild(pokeCardF)
     pokeCard.appendChild(pokeCardB)
@@ -129,6 +147,8 @@ async function createPokemonCard(pokemon) {
     pokeGallery.appendChild(cardHolder)
 
 }
+/* <a href="https://pokemon.fandom.com/es/wiki/${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}" target="_blank" class="btn-ref">Conocer mas</a>
+ */
 function checkTypes(id) {
     return new Promise((resolve, reject) => {
         if (id.types.length === 2) {
@@ -156,17 +176,23 @@ async function getTypeColor(pokemon) {
         checkTypes(pokemon)
             .then(() => {
                 let colors = [];
-                colors.push(analizePokemonJSON(pokemon,0,color))
-                colors.push(analizePokemonJSON(pokemon,1,color))
+                colors.push(analizePokemonJSON(pokemon, 0, color))
+                colors.push(analizePokemonJSON(pokemon, 1, color))
                 resolve(colors);
             })
             .catch(() => {
-                reject(analizePokemonJSON(pokemon,0,color));
+                reject(analizePokemonJSON(pokemon, 0, color));
             })
     })
 
 }
-function analizePokemonJSON(pokemon,n,colorArray){
+async function getGenders(pokemon) {
+    const res = await fetch(`https://pokeapi.co/api/v2/gender/${pokemon.toLowerCase()}/`);
+    const data = await res.json();
+    console.log(data);
+
+}
+function analizePokemonJSON(pokemon, n, colorArray) {
     for (let pokeType of colorArray) {
         let tipo = pokeType.type;
         let color = pokeType.color;
@@ -177,7 +203,13 @@ function analizePokemonJSON(pokemon,n,colorArray){
     }
 }
 function setBgProperties(nodo, color) {
-    nodo.style.background = `radial-gradient(circle at 50% 0%,${color} 40%, white 36%)`;
+
+    color.length == 2 ?
+        (nodo.style.background = `radial-gradient(circle at 50% 0%,${color[0]} 20%, ${color[1]} 100%)`) :
+        (nodo.style.background = `radial-gradient(circle at 50% 0%,${color} 20%, white 100%)`)
+
+
+
 
 }
 function setBgPropertiesE(nodo, color) {
