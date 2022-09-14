@@ -34,6 +34,7 @@
 .pokeball {
   max-width: 150px;
   position: absolute;
+  display: block;
   top: -5%;
   left: 5%;
 }
@@ -58,7 +59,7 @@
   perspective: 1000px;
 }
 .pokecard {
-  width: 320px;
+  width: 300px;
   height: 400px;
   border: none;
   position: relative;
@@ -269,3 +270,8 @@
 /* #pokeAPI{
     display: none;
 } */
+@media screen and(max-width:550px) {
+  .pokeball{
+    display: none;
+  }
+}
