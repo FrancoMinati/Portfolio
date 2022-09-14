@@ -312,8 +312,8 @@
 
             <div class="container shadow-lg px-4  py-4 d-flex flex-column align-items-center">
                 <div id="btns-solicitudes" class="d-flex justify-content-center mx-auto ">
-                    <button id="btn-solicitud">Solicitudes <i class="bi bi-inbox-fill"></i></button>
-                    <button id="btn-delete-solicitud"><i class="bi bi-eye"></i> </button>
+                    <button id="btn-solicitud" class="button">Solicitudes <i class="bi bi-inbox-fill"></i></button>
+                    <button id="btn-delete-solicitud" class="button"><i class="bi bi-eye"></i> </button>
                     <!--Agregar boton a cada campo para eliminar el campo-->
                 </div>
                 <table id="tabla-solicitudes">
@@ -330,15 +330,16 @@
             </div>
         </section>
         <section id="pokeAPI">
-            <div class="container shadow-lg px-4 py-5">
+            <div class="container shadow-lg py-5">
                 <div class="pokeSearch">
-                    <h2>PokeAPI</h2>
+                    <h2 class="pokeAPI-title">PokeAPI</h2>
+                    <img src="images/common-use/pokeball.png" alt="pokeball" class="pokeball">
                     <label for="">Busca tu pokemon: </label>
                     <input type="text" name="" id="pokeInput">
                     <input type="submit" value="Buscar" id="pokeSubmit">
                 </div>
 
-                <div class="card-container" id="pokeGallery">
+                <div class="poke-card-container" id="pokeGallery">
 
                 </div>
             </div>

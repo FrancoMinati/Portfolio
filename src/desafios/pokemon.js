@@ -1,19 +1,27 @@
 const obtenerPokemon = document.querySelector("#pokeInput");
 const buscarPokemon = document.querySelector("#pokeSubmit");
 const pokeAPISection = document.querySelector("#proyectos-pokeAPI")
+const pokemonGallery = document.querySelector("#pokeGallery")
+
 //La seccion se mantiene oculta hasta que se presione el circulo de proyectos de la pokeapi
 /* pokeAPISection.addEventListener("click", () => {
     document.querySelector("#pokeAPI").style.display = "block";
 });
  */
+const cards = [];
+
 buscarPokemon.addEventListener("click", () => {
+    
     let pokemon = obtenerPokemon.value;
     setTimeout(() => {
         pedirPokemon(pokemon)
+        pokemonGallery.style.visibility="visible"
+
     }, 1500)
 
 
 })
+
 //Pedir pokemon chequea si el pokemon que se pide por el label existe en la bd de pokeapi
 async function pedirPokemon(pokemon) {
     try {
@@ -29,6 +37,7 @@ async function pedirPokemon(pokemon) {
                     icon: 'success',
                     title: 'Enhorabuena',
                     text: 'Aqui esta tu: ' + obtenerPokemon.value + "!"
+
                 })
             })
             //Sino catch tira el error y la alerta
@@ -56,11 +65,14 @@ async function createPokemonCard(pokemon) {
     const pokeGallery = document.querySelector("#pokeGallery")
     //Creacion del contenedor de la carta
     const cardHolder = document.createElement('div')
-    //Id set por si es necesario trabajar con esto
-    cardHolder.setAttribute("id", "p" + pokemon.id.toString().padStart(0, 3))
-    cardHolder.classList.add("card-holder")
+
+    cardHolder.classList.add("poke-card-holder")
     //Creacion de la carta
     const pokeCard = document.createElement('div')
+    //Id set por si es necesario trabajar con esto
+
+    pokeCard.setAttribute("id", "p" + pokemon.id.toString().padStart(0, 3))
+
     pokeCard.classList.add("pokecard")
     //Frente de la pokeCarta
     const pokeCardF = document.createElement('div')
@@ -76,11 +88,18 @@ async function createPokemonCard(pokemon) {
     const pokeStats = document.createElement('div');
     pokeStats.classList.add("pokeStatsContainer")
     pokeStats.innerHTML =
-    `<span class="pokeStats">HP</span><span>${pokemon.stats[0].base_stat}</span>
+        `<span class="pokeStats">HP</span><span>${pokemon.stats[0].base_stat}</span>
      <span class="pokeStats">ATK</span><span>${pokemon.stats[1].base_stat}</span>
      <span class="pokeStats">DEF</span><span>${pokemon.stats[2].base_stat}</span>
      <span class="pokeStats">SPD</span><span>${pokemon.stats[5].base_stat}</span>`
     pokeCardF.appendChild(pokeStats)
+    const pokeBtnRotate = document.createElement("button")
+
+    pokeBtnRotate.classList.add("poke-rotate-btn-f")
+    pokeBtnRotate.innerHTML = `<i class="bi bi-arrow-left-short"></i>`
+    pokeCardF.appendChild(pokeBtnRotate)
+
+
     checkTypes(pokemon)
         .then(() => {
 
@@ -123,7 +142,7 @@ async function createPokemonCard(pokemon) {
     //Ver mas tarde como hacer para ver si tiene mas tipos
 
     pokeCardB.classList.add("card-back-poke")
-    pokeCardB.innerHTML =
+    pokeCardB.innerHTML +=
         `<h2 class="pokeName">${pokemon.name}</h2>
         <div class="card-back-poke-body">
     
@@ -139,12 +158,28 @@ async function createPokemonCard(pokemon) {
     
     
      `
+    const pokeBtnRotateB = document.createElement("button")
+    pokeBtnRotateB.classList.add("poke-rotate-btn-b")
+    pokeBtnRotateB.innerHTML = `<i class="bi bi-arrow-right-short"></i>`
+    pokeCardB.appendChild(pokeBtnRotateB)
 
     pokeCard.appendChild(pokeCardF)
     pokeCard.appendChild(pokeCardB)
     cardHolder.append(pokeCard)
-
     pokeGallery.appendChild(cardHolder)
+
+    cards.push(
+        pokeBtnRotate.addEventListener("click", () => {
+            pokeCard.classList.toggle("fliper")
+        })
+    )
+    cards.push(
+        pokeBtnRotateB.addEventListener("click", () => {
+            console.log("taka taka")
+            pokeCard.classList.toggle("fliper")
+        })
+    )
+
 
 }
 /* <a href="https://pokemon.fandom.com/es/wiki/${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}" target="_blank" class="btn-ref">Conocer mas</a>
@@ -218,4 +253,6 @@ function setBgPropertiesE(nodo, color) {
 
 
 }
+
+
 export * as pokemon from './pokemon.js'

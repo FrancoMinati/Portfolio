@@ -1,6 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 .pokeSearch {
   text-align: center;
   font-weight: bold;
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  background-color: white;
+  position: relative;
+  min-height: 200px;
+
+  & .pokeAPI-title {
+    font-size: 4em;
+    font-family: "Bungee", cursive;
+    text-shadow: 1px 1px 5px white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    color: $color-5;
+  }
+}
+.poke-card-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: linear-gradient(rgb(85, 161, 85) 10%, white 100%);
+  border-radius: 1em;
+  perspective: 1000px;
+}
+#pokeGallery {
+  visibility: hidden;
+}
+.pokeball {
+  max-width: 150px;
+  position: absolute;
+  top: -5%;
+  left: 5%;
+}
+.pokeball:hover {
+  animation: pokeball ease-in-out 2500ms infinite;
+  transition: animation 500ms;
+}
+@keyframes pokeball {
+  25% {
+    transform: rotateZ(20deg);
+  }
+
+  75% {
+    transform: rotateZ(-35deg);
+  }
+  90% {
+    transform: rotateZ(15deg);
+  }
+}
+.poke-card-holder {
+  margin: 1em 1em 25px 0em;
+  perspective: 1000px;
 }
 .pokecard {
   width: 320px;
@@ -12,12 +67,57 @@
   border-radius: 1em;
   box-shadow: 0px 0px 30px -5px gray;
 }
-.card-holder:hover .pokecard {
+
+.poke-card-holder:hover {
+  cursor: pointer;
+}
+
+.fliper {
   transform: rotateY(180deg);
+}
+
+.poke-rotate-btn-f {
+  width: 30px;
+  height: 30px;
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  background: none;
+  border: none;
+  transition: color 600ms;
+  &:hover {
+    border: none;
+    transition: none;
+    background-color: none;
+    color: black;
+    transition: color 600ms;
+  }
+}
+.poke-rotate-btn-b {
+  width: 30px;
+  height: 30px;
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  right: 0.3em;
+  top: 0.2em;
+  background: none;
+  border: none;
+  z-index: 1;
+  transition: color 600ms;
+  &:hover {
+    border: none;
+    transition: none;
+    background-color: none;
+    color: black;
+    transition: color 600ms;
+  }
 }
 .pokeImg {
   margin: auto;
-  width:65%;
+  width: 65%;
   border-radius: 1em;
   position: absolute;
   top: 15%;
@@ -30,19 +130,17 @@
     width: 100%;
     justify-content: space-around;
   }
-  &-s , &-p{
-    
+  &-s,
+  &-p {
     text-transform: uppercase;
-    font-size: .8em;
-    padding: 0em .1em ;
+    font-size: 0.8em;
+    padding: 0em 0.1em;
     width: 70px;
     border-radius: 1em;
     border: 3px solid white;
     outline: 2px solid black;
     box-sizing: content-box;
-    
   }
-  
 }
 .card-front-poke {
   @extend .card-front;
@@ -53,7 +151,7 @@
   position: relative;
   box-sizing: border-box;
   position: relative;
-  
+
   //pseudo-elements
   //tags
   & h2 {
@@ -76,7 +174,7 @@
     background-color: lightgray;
     padding: 0.75em 1em;
     border-radius: 0 50% 0 1em;
-    opacity: .9;
+    opacity: 0.9;
   }
 }
 .card-back-poke {
@@ -86,25 +184,24 @@
   color: black;
   font-weight: bold;
   text-align: center;
+
   & .pokeName {
     text-transform: capitalize;
     font-family: "karla", sans-serif;
     color: $color-01;
-    margin-top: .5em;
+    margin-top: 0.5em;
     font-size: 1.6em;
     font-weight: bold;
     position: relative;
-    
   }
-  & .pokeName::after{
-    content: '';
+  & .pokeName::after {
+    content: "";
     width: 100%;
     position: absolute;
     bottom: -25%;
     left: 0;
     height: 2%;
     background-color: rgb(143, 143, 143);
-
   }
 }
 .card-back-poke-body {
@@ -112,10 +209,17 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  & p{
+  width: 80%;
+  border-radius: 1em;
+  background: linear-gradient();
+  /*añadimos sombras inferiores*/
+
+  box-shadow: 0px 5px 5px 0px rgb(105, 105, 105);
+
+  & p {
     font-size: 0.8em;
     line-height: 1;
+    color: red;
   }
 }
 .card-back-poke h2 {
@@ -149,19 +253,18 @@
   background-color: $color-4;
   transition: box-shadow 600ms, background-color 600ms;
 }
-.pokeStatsContainer{
-display: flex;
-flex-direction: column;
-position: absolute;
-right: 5%;
-top:8%;
-font-size: .8em;
-
+.pokeStatsContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 5%;
+  top: 8%;
+  font-size: 0.8em;
 }
-.pokeStats{
-border-radius: 50%;
-background-color: white;
-padding: .4em .2em;
+.pokeStats {
+  border-radius: 50%;
+  background-color: white;
+  padding: 0.4em 0.2em;
 }
 /* #pokeAPI{
     display: none;
