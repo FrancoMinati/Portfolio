@@ -1,21 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
-.pokeSearch {
-  text-align: center;
-  font-weight: bold;
+
+.pokemon-API-container {
+  background: url(/images/common-use/pexels-rudolf-jakkel-418831.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  border: 10px solid black;
+  margin: 0em 1.2em;
+  box-shadow: 0px 5px 25px 10px rgb(168, 168, 168);
   max-width: 1200px;
-  margin: auto;
+  margin: 0em 1.4em;
   height: 100%;
-  background-color: white;
   position: relative;
   min-height: 200px;
+ 
+}
 
-  & .pokeAPI-title {
-    font-size: 4em;
-    font-family: "Bungee", cursive;
-    text-shadow: 1px 1px 5px white;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-    color: $color-5;
+.pokeAPI-title {
+  font-size: 4em;
+  font-family: "Bungee", cursive;
+  text-shadow: 1px 1px 5px $color-01;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  max-width: 320px;
+  margin-left: .5em;
+  margin-bottom: 0.5em;
+  color: $color-dust;
+  opacity: 0.9;
+  text-align: start;
+  transition: color 300ms;
+  &:hover {
+    color: $color-snow;
+  }
+}
+.poke-search {
+  display: flex;
+  justify-content: center;
+}
+.poke-search-container {
+  width: 100%;
+  max-width: 400px;
+  min-height: 80px;
+  background-color: white;
+  opacity: 0.85;
+  font-family: "Karla",cursive;
+  padding: .25em .5em;
+  margin-bottom: .5em;
+  border-radius: 1em 0 1em 0;
+}
+.poke-label{
+  width: 100%;
+  font-weight: 500;
+  margin-left: .25em;
+
+}
+#pokeInput{
+  margin-left: .25em;
+  width:65%;
+  transition: font-weight 300ms;
+  &:focus{
+    background-color: $color-sand;
+    border-left:$color-snow 2px solid ;
+    border-bottom: $color-snow 2px solid;
+    color: black;
+    font-weight: bold;
+  }
+}
+#pokeSubmit{
+  width: 30%;
+  margin-left: .5em;
+  background-color: $color-dust;
+  border: 1px solid $color-dust;
+  transition: box-shadow 800ms;
+  &:hover{
+   box-shadow: 0 0 15px 5px $color-dust;
   }
 }
 .poke-card-container {
@@ -24,7 +82,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: linear-gradient(rgb(85, 161, 85) 10%, white 100%);
   border-radius: 1em;
   perspective: 1000px;
 }
@@ -54,7 +111,7 @@
   }
 }
 .poke-card-holder {
-  margin: 1em 1em 25px 0em;
+  margin: 1em 0;
   perspective: 1000px;
 }
 .pokecard {
@@ -266,6 +323,18 @@
   background-color: white;
   padding: 0.4em 0.2em;
 }
-/* #pokeAPI{
-    display: none;
-} */
+
+@media screen and (max-width:550px) {
+  .pokeAPI-title{
+    font-size: 3em;
+    text-align: center;
+  }
+  .pokecard {
+    width: 230px;
+    height: 340px;
+  }
+  .pokemon-API-container{
+    border: 4px solid black;
+  }
+  
+}
