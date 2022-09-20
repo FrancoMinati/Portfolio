@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
 .pokemon-API-container {
-  background: url(/images/common-use/pexels-rudolf-jakkel-418831.jpg);
+  background-image: url('../../../images/common-use/pexels-rudolf-jakkel-418831.jpg');
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
@@ -9,7 +9,8 @@
   margin: 0em 1.2em;
   box-shadow: 0px 5px 25px 10px rgb(168, 168, 168);
   max-width: 1200px;
-  margin: 0em 1.4em;
+  margin: auto;
+  padding: 0em 4em;
   height: 100%;
   position: relative;
   min-height: 200px;
@@ -45,7 +46,7 @@
   opacity: 0.85;
   font-family: "Karla",cursive;
   padding: .25em .5em;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
   border-radius: 1em 0 1em 0;
 }
 .poke-label{
@@ -126,9 +127,7 @@
   box-shadow: 0px 0px 30px -5px gray;
 }
 
-.poke-card-holder:hover {
-  cursor: pointer;
-}
+
 
 .fliper {
   transform: rotateY(180deg);
@@ -145,6 +144,7 @@
   background: none;
   border: none;
   transition: color 600ms;
+  cursor: pointer;
   &:hover {
     border: none;
     transition: none;
