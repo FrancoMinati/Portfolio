@@ -698,7 +698,7 @@ table tr:last-child {
   transition: box-shadow 600ms, background-color 600ms; }
 
 .pokemon-API-container {
-  background-image: url("../../../images/common-use/pexels-rudolf-jakkel-418831.jpg");
+  background-image: url("../images/common-use/pexels-rudolf-jakkel-418831.jpg");
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
@@ -706,7 +706,7 @@ table tr:last-child {
   margin: 0em 1.2em;
   box-shadow: 0px 5px 25px 10px #a8a8a8;
   max-width: 1200px;
-  margin: auto;
+  margin: 0em 1.5em;
   padding: 0em 4em;
   height: 100%;
   position: relative;
