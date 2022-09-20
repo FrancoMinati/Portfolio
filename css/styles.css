@@ -457,26 +457,58 @@ input[select] {
     top: 0; } }
 
 section {
+  margin: 0em 100px 0em 100px;
   margin-bottom: 150px; }
 
-body {
-  /*  background: linear-gradient(
-      0deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(111, 65, 217, 1) 0%,
-      rgba(77, 29, 164, 1) 30%,
-      rgba(36, 10, 108, 1) 50%,
-      rgba(0, 0, 0, 1) 100%
-    ); */
-  background-color: #fff;
+body,
+html {
   margin: 0;
   padding: 0; }
+
+body {
+  background: url("../images/common-use/pexels-iva-muškić-691710.jpg");
+  background-size: 100%;
+  background-repeat: round; }
 
 header,
 nav {
   min-height: 120px;
   max-height: 200px;
   display: block; }
+
+.containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px lightgrey;
+  padding: 20px 50px;
+  background-color: white; }
+
+.container-inside {
+  margin: auto;
+  padding: 20px; }
+
+@media screen and (max-width: 1200px) {
+  section {
+    margin: 0px 50px;
+    margin-bottom: 150px; }
+  .containers {
+    padding: 20px 25px; } }
+
+@media screen and (max-width: 786px) {
+  section {
+    margin: 0px 50px;
+    margin-bottom: 150px; }
+  .containers {
+    padding: 20px 25px; } }
+
+@media screen and (max-width: 550px) {
+  section {
+    margin: 0px 0px;
+    margin-bottom: 150px; }
+  .containers {
+    padding: 20px 0px;
+    box-shadow: none; } }
 
 .button {
   padding: 0.2em 3em;
@@ -703,10 +735,9 @@ table tr:last-child {
   background-position: center;
   background-size: cover;
   border: 10px solid black;
-  margin: 0em 1.2em;
   box-shadow: 0px 5px 25px 10px #a8a8a8;
-  max-width: 1200px;
-  margin: 0em 1.5em;
+  max-width: 100%;
+  margin: auto;
   padding: 0em 4em;
   height: 100%;
   position: relative;
@@ -769,7 +800,7 @@ table tr:last-child {
     box-shadow: 0 0 15px 5px #816c61; }
 
 .poke-card-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -800,7 +831,7 @@ table tr:last-child {
     transform: rotateZ(15deg); } }
 
 .poke-card-holder {
-  margin: 1em 0;
+  margin: 1em 1em;
   perspective: 1000px; }
 
 .pokecard {

@@ -1,24 +1,63 @@
 section {
+  margin: 0em 100px 0em 100px;
+  margin-bottom: 150px;
+}
+// Paleta de colores
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url("../images/common-use/pexels-iva-muškić-691710.jpg");
+  background-size: 100%;
+  background-repeat: round;
+}
+header,
+nav {
+  min-height: 120px;
+  max-height: 200px;
+  display: block;
+}
+
+.containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px lightgrey;
+  padding: 20px 50px;
+  background-color: white;
+}
+.container-inside {
+  margin: auto;
+  padding: 20px;
+}
+@media screen and (max-width: 1200px) {
+  section {
+    margin: 0px 50px;
     margin-bottom: 150px;
   }
-  // Paleta de colores
-  
-  body {
-    /*  background: linear-gradient(
-      0deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(111, 65, 217, 1) 0%,
-      rgba(77, 29, 164, 1) 30%,
-      rgba(36, 10, 108, 1) 50%,
-      rgba(0, 0, 0, 1) 100%
-    ); */
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
+  .containers {
+    padding: 20px 25px;
   }
-  header,
-  nav {
-    min-height: 120px;
-    max-height: 200px;
-    display: block;
+}
+@media screen and (max-width: 786px) {
+  section {
+    margin: 0px 50px;
+    margin-bottom: 150px;
   }
+  .containers {
+    padding: 20px 25px;
+  }
+}
+@media screen and (max-width: 550px) {
+  section {
+    margin: 0px 0px;
+    margin-bottom: 150px;
+  }
+  .containers {
+    padding: 20px 0px;
+    box-shadow: none;
+  }
+}
