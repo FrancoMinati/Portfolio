@@ -6,9 +6,10 @@
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
-  border: 10px solid black;
-  box-shadow: 0px 5px 25px 10px rgb(168, 168, 168);
-  max-width: 100%;
+  border: 5px outset darkslategrey;
+  border-right: 5px outset rgb(142, 192, 192);
+  border-bottom:5px outset rgb(142, 192, 192);
+  box-shadow: 0 0 40px 15px rgb(40, 40, 40);  max-width: 100%;
   margin:auto;
   padding: 0em 4em;
   height: 100%;

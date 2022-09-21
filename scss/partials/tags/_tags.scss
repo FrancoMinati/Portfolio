@@ -10,24 +10,21 @@ html {
   padding: 0;
 }
 body {
-  background: url("../images/common-use/pexels-iva-muškić-691710.jpg");
+  background: url("../images/common-use/pexels-mark-neal-3331792.jpg");
   background-size: 100%;
-  background-repeat: round;
+  background-repeat: repeat-y;
+
 }
-header,
-nav {
-  min-height: 120px;
-  max-height: 200px;
-  display: block;
-}
+
 
 .containers {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 20px lightgrey;
+  box-shadow: 0 0 40px 15px rgb(40, 40, 40);
   padding: 20px 50px;
   background-color: white;
+
 }
 .container-inside {
   margin: auto;
