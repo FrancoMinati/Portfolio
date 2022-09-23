@@ -6,5 +6,5 @@ formulario.addEventListener("submit",evitarRefrescar )
 enviar.addEventListener("click",crear_Solicitud )
 btnSolicitud.addEventListener("click", mostrar_Solicitudes)
 btnHide.addEventListener("click",hideTableContent)
-
+localStorage.setItem("solicitudes",JSON.stringify([]))
 export * from './form.js';

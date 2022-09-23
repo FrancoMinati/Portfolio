@@ -22,7 +22,7 @@ function mostrar_Solicitudes() {
     checkTableContent();
     let solicitudes = JSON.parse(localStorage.getItem("solicitudes"))
     //Chequea que existan solicitudes previas
-    if (solicitudes != (null || solicitudes == [])) {
+    if ((solicitudes != (null || solicitudes == []))) {
         Swal.fire({
             icon: 'success',
             title: 'Exito',
