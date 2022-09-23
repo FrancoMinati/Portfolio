@@ -7,7 +7,13 @@
   border-radius: 1em;
   font-weight: 500;
 }
-
+.btn-delete {
+  border: none;
+  background-color: transparent;
+  &:hover{
+    color: $color-3;
+  }
+}
 .button:hover {
   background-color: $color-1;
   border: 1px $color-4 solid;
@@ -16,7 +22,7 @@
 .btn-ref {
   margin: auto;
   padding: 0.2em 1em;
-  
+
   background-color: $color-2;
   color: $color-0;
   border: 1px $color-7 solid;

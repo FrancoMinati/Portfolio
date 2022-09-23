@@ -24,13 +24,12 @@
   text-shadow: 1px 1px 5px $color-01;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
-  max-width: 320px;
-  margin-left: .5em;
+  
   margin-bottom: 0.5em;
-  color: $color-dust;
+  color: $color-6;
   opacity: 0.9;
-  text-align: start;
-  transition: color 300ms;
+  text-align: center;
+  transition: color 750ms;
   &:hover {
     color: $color-snow;
   }
@@ -71,11 +70,11 @@
 #pokeSubmit{
   width: 30%;
   margin-left: .5em;
-  background-color: $color-dust;
-  border: 1px solid $color-dust;
+  background-color: $color-6;
+  border: 1px solid $color-6;
   transition: box-shadow 800ms;
   &:hover{
-   box-shadow: 0 0 15px 5px $color-dust;
+   box-shadow: 0 0 15px 5px $color-6;
   }
 }
 .poke-card-container {

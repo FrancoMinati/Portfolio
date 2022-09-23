@@ -1,10 +1,10 @@
 
-import {formulario,enviar,btnSolicitud,btnDelete,btnBar} from './formElements.js'
-import {mostrar_Solicitudes,crear_Solicitud,evitarRefrescar,deleteTableContent} from './formFuncs.js'
+import {formulario,enviar,btnSolicitud,btnHide} from './formElements.js'
+import {mostrar_Solicitudes,crear_Solicitud,evitarRefrescar,hideTableContent} from './formFuncs.js'
 
 formulario.addEventListener("submit",evitarRefrescar )
 enviar.addEventListener("click",crear_Solicitud )
 btnSolicitud.addEventListener("click", mostrar_Solicitudes)
-btnDelete.addEventListener("click",deleteTableContent)
+btnHide.addEventListener("click",hideTableContent)
 
 export * from './form.js';

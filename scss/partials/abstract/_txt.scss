@@ -155,14 +155,13 @@ a:hover {
     text-align: center;
     font-weight: bold;
     font-family: "Oswald", sans-serif;
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: white;
     padding: 0.25em;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke: 0.05px black;
+    
     transition: color 500ms, font-size 500ms;
 &:hover{
-  color: black;
+  color: $color-3;
   font-size: 4.25em;
 }
 }

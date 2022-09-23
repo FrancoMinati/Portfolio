@@ -1,11 +1,12 @@
-import {email,numero} from './formElements.js'
+import { email, numero } from './formElements.js'
 export default class Formulario {
-    constructor(nombre, apellido, email, numero, motivo) {
+    constructor(nombre, apellido, email, numero, motivo,password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.numero = numero;
         this.motivo = motivo;
+        this.password=null;
     }
     setEmail(emailAtribute) {
         //Existe lo que se llama expresion regular para el email o EmailRegex
@@ -36,5 +37,9 @@ export default class Formulario {
         } else {
             return false;
         }
+    }
+    generarContra() {
+        this.password="p@#"+Math.random() * (125745)
+        return this.password;
     }
 }

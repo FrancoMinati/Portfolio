@@ -221,12 +221,7 @@ async function getTypeColor(pokemon) {
     })
 
 }
-async function getGenders(pokemon) {
-    const res = await fetch(`https://pokeapi.co/api/v2/gender/${pokemon.toLowerCase()}/`);
-    const data = await res.json();
-    console.log(data);
 
-}
 function analizePokemonJSON(pokemon, n, colorArray) {
     for (let pokeType of colorArray) {
         let tipo = pokeType.type;

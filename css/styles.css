@@ -125,14 +125,12 @@ a:hover {
   text-align: center;
   font-weight: bold;
   font-family: "Oswald", sans-serif;
-  color: white;
+  color: black;
   background-color: white;
   padding: 0.25em;
-  -webkit-text-stroke-color: black;
-  -webkit-text-stroke: 0.05px black;
   transition: color 500ms, font-size 500ms; }
   .welcome-title:hover {
-    color: black;
+    color: #7d29ee;
     font-size: 4.25em; }
 
 @media screen and (max-width: 1000px) {
@@ -537,6 +535,12 @@ body {
   border-radius: 1em;
   font-weight: 500; }
 
+.btn-delete {
+  border: none;
+  background-color: transparent; }
+  .btn-delete:hover {
+    color: #7d29ee; }
+
 .button:hover {
   background-color: #0960d5;
   border: 1px #0c55b7 solid;
@@ -769,13 +773,11 @@ table tr:last-child {
   text-shadow: 1px 1px 5px #000;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
-  max-width: 320px;
-  margin-left: .5em;
   margin-bottom: 0.5em;
-  color: #816c61;
+  color: #ff1c1c;
   opacity: 0.9;
-  text-align: start;
-  transition: color 300ms; }
+  text-align: center;
+  transition: color 750ms; }
   .pokeAPI-title:hover {
     color: #e9f1f7; }
 
@@ -813,11 +815,11 @@ table tr:last-child {
 #pokeSubmit {
   width: 30%;
   margin-left: .5em;
-  background-color: #816c61;
-  border: 1px solid #816c61;
+  background-color: #ff1c1c;
+  border: 1px solid #ff1c1c;
   transition: box-shadow 800ms; }
   #pokeSubmit:hover {
-    box-shadow: 0 0 15px 5px #816c61; }
+    box-shadow: 0 0 15px 5px #ff1c1c; }
 
 .poke-card-container {
   max-width: 100%;
